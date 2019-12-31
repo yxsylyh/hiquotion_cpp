@@ -1,0 +1,110 @@
+语义执行管理（SEM）
+
+语义执行管理，根据语法定义，自动执行其语义的一种对象。比如如下代码：
+
+int a=0;
+int b=1;
+int c=a+b;
+int d=a*(b+c);
+print c;
+
+在构造出其规约树之后，构建其语法树。根据语法树来执行语义，语义的执行就是由语义执行管理来完成的。
+
+比如int a=0;这句，首先声明int类型的变量a，然后给变量a赋值0。那么SEM应该具有变量声明和变量赋值的能力，比如
+
+sem.declare("int", "a");
+sem.setvalue("a", 0);
+
+全部代码类似下面这样：
+
+sem.declare("int", "a");
+sem.setvalue("a", 0);
+sem.declare("int", "b");
+sem.setvalue("b", 1);
+sem.declare("int", "c");
+expr=sem.constructExpr("+", "a", "b");
+sem.setvalue("c", expr.execute());
+sem.declare("int", d);
+expr2=sem.constructExpr("+", "b", "c")
+expr3=sem.constructExpr("*", "a", expr2);
+sem.setvalue("d", expr3);
+
+考虑函数的定义，比如如下代码：
+
+void foo()
+{
+}
+
+可以写成如下：
+
+sem.declareFunction("foo","void");
+
+可以如果要考虑类定义，那么可能是这样：
+
+sem.declareClass("someclass");
+
+这样每增加一种数据类型，就要增加一种声明该类型的方法，就要每次都修改sem类的定义。那么这样的sem就不是一种很好的设计。
+
+可以考虑这样，变量定义
+
+sem.declare("var", "a", "int");  // int a;
+
+弱类型变量定义
+
+sem.decare("var", "a", "var");  // var a;
+
+结构体定义
+
+sem.declare("struct", "struct_name");                            // struct struct_name{
+sem.declareInternel("struct_name", "var_name", "int"); //     int var_name;
+sem.declareInternel("struct_name", "id", "string");        //     string id;           };
+
+sem.declare("var", "s_name", "struct_name");  // struct_name s_name;
+
+枚举定义
+
+sem.declare("enum", "enum_name");                // enum enum_name{
+sem.declareInternal("enum_name", "Apple");   //     Apple,
+sem.declareInternal("enum_name", "Banana"); //     Banana,             };
+
+常量定义
+
+sem.declare("const", "constant_name", "int", 0);  // const int a=0;
+
+函数定义
+
+sem.declare("func", "func_name");               // void func_name(int a, int b){
+sem.declareInput("func_name", "a", "int");
+sem.declareInput("func_name", "b", "int");
+sem.declareOutput("func_name", "", "void");
+
+sem.begin("func_name", "global");  // execute 内部执行的怎么定义呢？
+sem.executeInput("a", 0);
+sem.executeInput("b", 1);
+
+
+类定义
+
+class A{
+  int a;
+  int b;
+  [void, string err] div(int a1, int a2){
+    if(a2==0){
+      err="could not divided by zero!";
+      return;
+    }
+
+    return a1/a2,;};
+};
+
+sem.declare("class", "A");   // 类定义
+sem.declareInternal("A", "a", "int");
+sem.declareInternal("A", "b", "int");
+sem.declareInternal("A", "add", "func");  // 类函数定义
+sem.declareInput("add", "a1", "int");
+sem.declareInput("add", "a2", "int");
+sem.declareOutput("add", "", void);
+sem.declareOutput("add", "err", "string");
+
+类函数执行
+sem.begin("add", "math");

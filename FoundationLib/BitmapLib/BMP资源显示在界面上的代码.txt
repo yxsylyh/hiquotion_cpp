@@ -1,0 +1,17 @@
+	CRect rect;
+	GetClientRect(&rect);
+
+	CBitmap bmp;
+	BOOL ret = bmp.LoadBitmap(m_bgId);
+	if (ret)
+	{
+		CDC dcImage;
+		ret = dcImage.CreateCompatibleDC(&dc);
+		if (ret)
+		{
+			dcImage.SelectObject(&bmp);
+			BITMAP bmInfo;
+			bmp.GetBitmap(&bmInfo);
+			dc.StretchBlt(0, 0, rect.Width(), rect.Height(), &dcImage, 0, 0, bmInfo.bmWidth, bmInfo.bmHeight, SRCCOPY);
+		}
+	}

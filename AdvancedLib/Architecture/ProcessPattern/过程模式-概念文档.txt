@@ -1,0 +1,123 @@
+过程模式（ProcessPattern）
+
+主要用于程序过程（主要指业务逻辑过程）不断变化的情况，包括需求变更后业务过程的变更，或者针对不同的相关产品的实现过程细节不同的情况。
+
+一、过程的定义
+
+过程可以包含若干子过程（即支持给过程添加子过程）。（注：该功能在有向图中完成）
+
+过程的执行可以是同步的，也可以是异步的。过程执行完毕后的状态，包括等待异步事件、正常（即可以继续下一过程）、有异常但不影响继续下一过程、有错误建议重试（可以没有重试次数限制，或者重试次数可以自定或外部给定，超过次数限制，则需要返回有错误程序必须终止）、和有错误程序必须终止。
+
+如果过程执行完毕后的状态不是“等待异步事件”，则说明该过程是同步过程，如果是正常，则可以根据结果码来决定下一步执行哪一个过程（通过配置文件指定结果码与下一执行过程的关联）；如果过程执行完毕后的状态是“等待异步事件”，则说明该过程是异步过程，需要等待过程抛出事件。过程抛出事件后，再根据过程的状态，决定下一步。需要指出的是，过程抛出事件后，过程的状态有可能还是“等待异步事件”（比如指纹仪刮手指的过程，如果刮手指不合格，还需要再次刮手指后抛出事件）。
+
+过程抛出的事件包含3个参数，一个是过程当前状态，一个是结果码，最后一个是消息
+
+过程可能需要直接与用户界面做交互，所以给过程提供一个抛出结果码和字符串消息的事件，结果码和消息可以在实际过程中自行定义。需要说明的是，该事件不会中断过程的执行。
+
+过程中都需要记录失败的原因信息，供上层过程获取。
+
+在过程执行失败时，将使用获取失败所在文件的宏、以及失败所在行的宏来定位程序代码的出错位置。
+
+过程需要提供日志接口属性，方便每个过程把执行的日志记录下来
+
+过程执行的参数包括传入参数和传出参数。传入参数和传出参数都使用相同的参数接口IParameter。两个参数需要事先在调用过程的外部定义，并以指针的形式作为过程函数的参数。传入参数和/或传出参数可以为NULL空指针。
+
+二、过程节点
+
+过程执行完毕，下一步该执行哪个过程？因为执行流程包含顺序结构、选择结构和循环结构，所以过程与过程之间应该构成一个有向图。过程包含在有向图的节点中，有向图中的节点称为过程节点。过程节点可以有两种类型，一个是顺序节点，另一个是选择节点。如果选择节点的下一个节点是前面执行过的过程节点，则节点间构成了循环。为了在适当时机跳出循环，需要由顺序节点和选择节点以及循环终止条件来构成更大的过程节点，可以称为循环节点。
+
+（这个先不考虑，只考虑顺序结构和选择结构，循环条件可以在循环起始节点上设置）既然循环节点可以包含顺序节点和选择节点，那么更宽泛一点，允许过程节点可以包含子过程节点。
+
+另外，过程节点应该可以通过配置文件来配置其所拥有的过程。
+
+
+三、执行流程
+
+有向图有一个开始节点，有若干个终止节点。从开始节点到一个终止节点，则整个程序执行完毕。
+
+对于选择结构，当过程执行完毕，如果是继续状态，则需要所执行的过程给出结果码，所调用的过程节点就可以根据该结果码从配置文件中找到下一节点并执行。
+
+四、过程初始化与过程节点初始化
+
+通过xml配置文件中的一节来初始化各个过程；然后在根据xml配置文件的另一节来初始化各个过程节点以及过程节点之间的关系。
+
+
+五、xml配置文件示例
+
+对于过程节点，type 代表过程类型，inorder是顺序结构，执行成功，直接执行下一过程；selector是选择结构，执行成功，则根据返回的结果码，在配置文件中查找下一过程并执行。如果未指定过程类型，则默认按顺序结构处理。
+
+finished 表示整个过程列表执行的终点。过程列表默认总是从第一个过程节点开始执行，到表示finished为True的过程节点或者过程列表的最后一个过程节点结束。配置文件中可能包含多个带finished属性的过程节点。
+
+nextNode属性表示无条件转向其指定的过程节点，类似goto语句。
+
+condition表示条件（目前应该支持=,>,<,>=,<=,&,|,!），resultCode是结果码
+
+<?xml version="2.0" encode="utf-8" ?>
+<config>
+  <nodes>
+    <!-- 节点，名称“GetUserInfo”，应用于“过程”，是异步的（同步时可省略），非多线程（可省略） -->
+    <node name="GetUserInfo" app="process" syn="False" />
+    <node name="ShowUserInfo" app="process" />
+    <node name="GetFinger" app="process" syn="False" />
+    <!-- 节点，名称“CheckFingerValid”，应用于“过程”，是异步的，多线程 -->
+    <node name="CheckFingerValid" app="process" syn="False" mt="True" />
+    <node name="SwapKey" app="process" syn="False" />
+    <node name="Verify" app="process" syn="False" />
+    <node name="Verify2" app="process" syn="False" />
+    <node name="ShowVerifyFailure" app="process" />
+    <node name="ShowOther" app="process" />
+  </nodes>
+  <arcs>
+    <arc from="START" to="GetUserInfo" />
+    <arc from="GetUserInfo" to="ShowOther">
+      <weight type="=" value="1" />
+    </arc>
+    <arc from="GetUserInfo" to="ShowUserInfo">
+      <weight type="=" value="0" />
+    </arc>
+    <arc from="ShowUserInfo" to="GetFinger" />
+    <!-- 弧，出弧“GetFinger”，入弧“CheckFingerValid”，条件“GetFinger返回0”  -->
+    <arc from="GetFinger" to="CheckFingerValid">
+      <weight type="=" value="0" />
+    </arc>
+    <!-- 弧，出弧“CheckFingerValid”，入弧“GetFinger”，条件“CheckFingerValid返回1、3、4或5”，因为可能指纹面积太小，或者手指太干、太湿等，需要重新采集指纹  -->
+    <arc from="CheckFingerValid" to="GetFinger">
+      <weight type="=" value="1,3,4,5" />
+    </arc>
+    <arc from="GetFinger" to="SwapKey">
+      <weight type="=" value="0" />
+    </arc>
+    <arc from="SwapKey" to="Verify">
+      <weight type="=" value="0" />
+    </arc>
+    <arc from="Verify" to="Verify2">
+      <weight type="=" value="241" />
+    </arc>
+    <arc from="Verify" to="ShowVerifyFailure">
+      <weight type="=" value="1" />
+    </arc>
+    <arc from="Verify2" to="ShowVerifyFailure">
+      <weight type="=" value="1" />
+    </arc>
+    <arc from="ShowVerifyFailure" to="GetFinger" />  <!-- 没有 weight，等于无条件转向 -->
+    <arc from="Verify" to="ShowOther">
+      <weight type="|" >
+        <weight type="=" value="0" />
+        <weight type="&" />
+          <weight type=">=" value="15" />
+          <weight type="<" value="25" />
+        </weight>
+      </weight>
+    </arc>
+    <arc from="Verify2" to="ShowOther">
+      <weight type="|" >
+        <weight type="=" value="0" />
+        <weight type="&" />
+          <weight type=">=" value="15" />
+          <weight type="<" value="25" />
+        </weight>
+      </weight>
+    </arc>
+    <arc from="ShowOther" to="END" />
+  </arcs>
+</config>

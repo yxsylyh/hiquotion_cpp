@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+     
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>
+
+    <script id="allmobilize" charset="utf-8" src="http://a.yunshipei.com/46aae4d1e2371e4aa769798941cef698/allmobilize.min.js"></script>
+ <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+
+    <title>pugixml库的使用（by yukin_xue) - yukin_xue的专栏
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="这两天接触了一个c++编写的xml解析库——pugixml，能解析xml内容，支持xpath解析，且能跨linux平台，不错！以前一直习惯用CMarkup，主要用它读写xml配置文件，但CMarkup不支持xpath,也只能在windows用，虽然习惯了CMarkup，不过若需要xpath解析，又需要跨linux平台，相比之下，pugixml确实是很好的选择，操作速度也快。学习文档：http://" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+        <!--new top-->
+               <link rel="stylesheet" href="http://static.csdn.net/public/common/toolbar/css/index.css">        <!--new top-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/default/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/yukin_xue/rss/list" />
+    <link rel="shortcut icon" href="http://csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+
+</head>
+<body>
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://static.csdn.net/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/yukin_xue">yukin_xue的专栏</a></h2>
+            <h3></h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+                <li id="btnContents"><a href="http://blog.csdn.net/yukin_xue?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/yukin_xue?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/yukin_xue/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "yukin_xue";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/yukin_xue";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/38514369"target="_blank">
+<font color=blue>7月推荐文章
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://download.csdn.net/album/detail/437">
+<font color=red>C++程序设计实践学材微课件</font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://bbs.csdn.net/ask">
+<font color=blue>社区问答第九期：老罗的Android之旅
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/blogdevteam/article/details/38657235"><font color=red>有奖试读&征文--当青春遇上互联网，能否点燃你的创业梦
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/csdnproduct/article/details/38110573">
+<font color=blue>关注社区微信得下载分
+</font></a>
+
+
+</div>                        </div>
+                          
+<link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<script language='JavaScript' type='text/javascript' src='http://download.csdn.net/js/jquery.cookie.js'></script>
+<script type="text/javascript" src="http://csdnimg.cn/rabbit/search-service/main.js"></script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Original"></span>
+
+
+    <h1>
+        <span class="link_title"><a href="/yukin_xue/article/details/7540011">
+        pugixml库的使用（by yukin_xue)
+        </a></span>
+    </h1>
+</div>
+
+    <div class="article_manage">
+    <span class="link_postdate">2012-05-06 18:35</span>
+    <span class="link_view" title="阅读次数">3920人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(0)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shoucang']);collectArticle('pugixml库的使用（by yukin_xue)','7540011');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_jubao']);report(7540011,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://www.csdn.net/tag/string' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">string</a><a href='http://www.csdn.net/tag/xml' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">xml</a><a href='http://www.csdn.net/tag/input' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">input</a><a href='http://www.csdn.net/tag/encoding' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">encoding</a><a href='http://www.csdn.net/tag/iterator' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">iterator</a><a href='http://www.csdn.net/tag/file' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">file</a></div>
+
+  
+    
+<div id="article_content" class="article_content">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这两天接触了一个c&#43;&#43;编写的xml解析库——pugixml，能解析xml内容，支持xpath解析，且能跨linux平台，不错！以前一直习惯用CMarkup，主要用它读写xml配置文件，但CMarkup不支持xpath,也只能在windows用，虽然习惯了CMarkup，不过若需要xpath解析，又需要跨linux平台，相比之下，pugixml确实是很好的选择，操作速度也快。学习文档：http://pugixml.googlecode.com/svn/tags/latest/docs/quickstart.html
+ , 总结一下使用步骤和简单的使用方法：</p>
+（1）使用pugixml库需要三个文件：pugiconfig.h/pugixml.h/pugixml.cpp，可直接从gugixml官网下载，将其加入工程，使用处包含头文件pugiconfig.h/pugixml.h即可。<br>
+<br>
+（2）加载xml文件，使用xml_document类的load_file接口:<br>
+&nbsp;&nbsp;&nbsp; std::strFile = &quot;../test.xml&quot;;<br>
+&nbsp;&nbsp;&nbsp; pugi::xml_document doc;<br>
+&nbsp;&nbsp;&nbsp; if (!doc.load_file(strFile.c_str())) <br>
+&nbsp;&nbsp;&nbsp; {&nbsp; //return -1;}<br>
+<br>
+（3）加载xml&#26684;式的字符串，使用xml_document类的load接口:<br>
+&nbsp;&nbsp;&nbsp; std::strText = &quot;****&quot;;<br>
+&nbsp;&nbsp;&nbsp; pugi::xml_document doc;<br>
+&nbsp;&nbsp;&nbsp; if (!doc.load(strText.c_str())) <br>
+&nbsp;&nbsp;&nbsp; {&nbsp; //return -1;}<br>
+<br>
+（4）xml节点读取，如xml文件params.xml：<br>
+&nbsp;&nbsp;&nbsp; &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; &nbsp;<br>
+&nbsp;&nbsp; &lt;root&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;!-- 输入参数配置 --&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;form ip=&quot;10.2.134.243&quot; port=&quot;80&quot; action=&quot;sisserver.php&quot;&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;input name=&quot;data_type&quot; value=&quot;POI&quot; /&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;input name=&quot;query_type&quot; value=&quot;TQUERY&quot; /&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;input name=&quot;category&quot; value=&quot;&quot; /&gt; <br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp; &lt;!-- 查询词的返回结果xpath配置 --&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;xpath poiroot=&quot;//list/poi&quot; idfield=&quot;pguid&quot; namefield=&quot;name&quot;/&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;!-- 评分权重配置 r1~r4-期望结果的权重，n1~n10-实际查询结果的排名权重--&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;weight&gt; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- 查询词正常得分阀&#20540; --&gt; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;threshold&gt;3&lt;/threshold&gt; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- 计算分数分布情况的步长&#20540; --&gt; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;step&gt;0.5&lt;/step&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;/weight&gt; <br>
+&nbsp; &lt;/root&gt;<br>
+&nbsp;&nbsp;&nbsp; 读取代码：<br>
+&nbsp;&nbsp;&nbsp; std::string strFile = &quot;/bak/workspace/test/src/params.xml&quot;;<br>
+&nbsp;&nbsp;&nbsp; pugi::xml_document doc;<br>
+&nbsp;&nbsp;&nbsp; if (!doc.load_file(strFile.c_str())) <br>
+&nbsp;&nbsp;&nbsp; {return 0;}<br>
+&nbsp;&nbsp;&nbsp; pugi::xml_node form = doc.child(&quot;root&quot;).child(&quot;form&quot;);<br>
+&nbsp;&nbsp;&nbsp; std::string ip = form.attribute(&quot;ip&quot;).value();<br>
+&nbsp;&nbsp;&nbsp; std::string port = form.attribute(&quot;port&quot;).value();<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; char cBuf[2083];<br>
+&nbsp;&nbsp;&nbsp; sprintf(cBuf, &quot;http://%s:%s/%s?&quot;, ip.c_str(), port.c_s());<br>
+&nbsp;&nbsp;&nbsp; std::string strTemp(cBuf);<br>
+&nbsp;&nbsp;&nbsp; std::string m_strURLBase = strTemp;<br>
+<br>
+&nbsp;&nbsp;&nbsp; for (pugi::xml_node input = form.first_child(); input;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; input = input.next_sibling())<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp; &nbsp;std::string strValue = input.attribute(&quot;value&quot;).value();<br>
+&nbsp;&nbsp; &nbsp;if (!strValue.empty()) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp; &nbsp;std::string strName = input.attribute(&quot;name&quot;).value();<br>
+&nbsp;&nbsp; &nbsp;sprintf(cBuf, &quot;%s=%s&amp;&quot;, strName.c_str(), strValue.c_str());<br>
+&nbsp;&nbsp; &nbsp;std::string strTemp(cBuf);<br>
+&nbsp;&nbsp; &nbsp;m_strURLBase &#43;= strTemp;<br>
+&nbsp;&nbsp; &nbsp;}<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //读取xpath<br>
+&nbsp;&nbsp;&nbsp; pugi::xml_node xpath = doc.child(&quot;root&quot;).child(&quot;xpath&quot;);<br>
+&nbsp;&nbsp;&nbsp; std::string m_strPOIRoot = xpath.attribute(&quot;poiroot&quot;).value();<br>
+&nbsp;&nbsp;&nbsp; std::string m_strPOIID = xpath.attribute(&quot;idfield&quot;).value();<br>
+<br>
+&nbsp;&nbsp;&nbsp; //读取评分权重<br>
+&nbsp;&nbsp;&nbsp; pugi::xml_node weight = doc.child(&quot;root&quot;).child(&quot;weight&quot;);<br>
+&nbsp;&nbsp;&nbsp; float m_fThred = atof(weight.child_value(&quot;threshold&quot;));<br>
+&nbsp;&nbsp;&nbsp; float m_fStep = atof(weight.child_value(&quot;step&quot;));<br>
+<br>
+(5)xpath解析，如xml&#26684;式的字符串strWebContent:<br>
+&nbsp;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; &nbsp;<br>
+&nbsp;&nbsp; &lt;root&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;list count=&quot;3&quot; time&quot;10&quot;&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;poi&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pguid&gt;123&lt;/pguid&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name&gt;xx1&lt;/name&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/poi&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;poi&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pguid&gt;456&lt;/pguid&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name&gt;xx2&lt;/name&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/poi&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;poi&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pguid&gt;789&lt;/pguid&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name&gt;xx3&lt;/name&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/poi&gt; <br>
+&nbsp;&nbsp;&nbsp; &lt;/list&gt; <br>
+&nbsp; &lt;/root&gt;<br>
+&nbsp; 其中，xpath根路径：m_strPOIRoot=&quot;//list/poi&quot;, <br>
+&nbsp; 需要取&#20540;的项：strPOIID=“pguid”，strPOINam=“name”。<br>
+<br>
+&nbsp; 读取代码：<br>
+&nbsp; //从strWebContent内容中解析出pguid和name<br>
+&nbsp; pugi::xml_document doc;<br>
+&nbsp; pugi::xml_parse_result result = doc.load(strWebContent.c_str());<br>
+&nbsp; if (!result)<br>
+&nbsp; {return -1;}<br>
+&nbsp; pugi::xpath_node_set tools = doc.select_nodes(m_strPOIRoot.c_str());<br>
+&nbsp; for (pugi::xpath_node_set::const_iterator it = tools.begin(); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it !=&nbsp; tools.end(); &#43;&#43;it)<br>
+&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; pugi::xpath_node node = *it;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; string strPOI = node.node().child_value(m_strPOIID.c_str());<br>
+&nbsp;&nbsp;&nbsp;&nbsp; string strName = node.node().child_value(m_strPOIName.c_str());<br>
+&nbsp; }<br>
+<br>
+<br>
+
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+<div class="bdsharebuttonbox" style="float: right;">
+<a href="#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"  style="background-position:0 -52px !important"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"style="background-position:0 -104px !important"></a>
+<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"style="background-position:0 -260px !important"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"style="background-position:0 -208px !important"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"style="background-position:0 -1612px !important" ></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+<!--192.168.100.35-->
+<ul class="article_next_prev">
+            <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='/yukin_xue/article/details/7486706';">上一篇</span><a href="/yukin_xue/article/details/7486706" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">Fedora 15/16 安装后需要做的28件事 | Cweili Alpha - 关注IT 记录身边事</a></li>
+            <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='/yukin_xue/article/details/7543423';">下一篇</span><a href="/yukin_xue/article/details/7543423" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">剖析ifstream打开含中文路径名文件失败的原因</a></li>
+</ul>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+
+</div>
+      <dl class="blog-associat-tag">
+        <dt>主题推荐</dt>
+        <dd>
+                <a href="http://www.csdn.net/tag/库" target="_blank" class="blog-tage-red" >库</a> 
+                <a href="http://www.csdn.net/tag/encoding" target="_blank" class="blog-tage-red" >encoding</a> 
+                <a href="http://www.csdn.net/tag/iterator" target="_blank" class="blog-tage-red" >iterator</a> 
+                <a href="http://www.csdn.net/tag/windows" target="_blank" class="blog-tage-red" >windows</a> 
+                <a href="http://www.csdn.net/tag/文档" target="_blank" class="blog-tage-red" >文档</a> 
+        </dd>
+    </dl> 
+
+
+<dl class="blog-ass-articl tracking-ad"  data-mod="popu_36" id="res-relatived"> 
+     <dt><span>猜你在找</span></dt>    
+</dl>
+
+<script type="text/javascript">
+    var searchtitletags = 'pugixml库的使用（by yukin_xue)' + ',' + '库,encoding,iterator,windows,文档';
+    searchService({
+        index: 'blog',
+        query: searchtitletags,
+        from: 10,
+        size: 10,
+        appendTo: '#res-relatived',
+        url: 'recommend',
+        his: 2,
+        client: "blog_cf_enhance",
+        tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+    });
+
+ </script>   
+
+
+    <div id="ad_cen">
+   
+          <script type="text/javascript">
+              new Ad(4, 'ad_cen');
+          </script>
+    </div>
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list">
+    </div>
+    <div id="comment_bar">
+    </div>
+    <div id="comment_form">
+    </div>
+
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '7540011';
+    var commentscount = 0;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+    <script type="text/javascript">
+    new Ad(5, 'ad_bot');
+    </script>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+      
+
+       <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+
+        if($("#comment_content").length>0)
+        {
+            $("#quick-reply").show();
+
+            $("#quick-reply").click(function(){
+                setEditorFocus();
+            });
+        }       
+     
+        var d_top = $('#d-top-a');
+        document.onscroll = function ()
+        {
+            var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+            if (scrTop > 500)
+            {
+                d_top.show();
+            } else
+            {
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function ()
+        {
+            scrollTo(0, 0);
+            this.blur();
+            return false;
+        });
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+<div class="tag_list">
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Hadoop" href="http://g.csdn.net/5272865" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title="AWS" href="http://g.csdn.net/5272866" target="_blank" onclick="LogClickCount(this,336);">AWS</a>
+<a title="移动游戏" href="http://g.csdn.net/5272870" target="_blank" onclick="LogClickCount(this,336);">移动游戏</a>
+<a title="Java" href="http://g.csdn.net/5272871" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="Android" href="http://g.csdn.net/5272872" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://g.csdn.net/5272873" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="Swift" href="http://g.csdn.net/5272868" target="_blank" onclick="LogClickCount(this,336);">Swift</a>
+<a title="智能硬件" href="http://g.csdn.net/5272869" target="_blank" onclick="LogClickCount(this,336);">智能硬件</a>
+<a title="Docker" href="http://g.csdn.net/5272867" target="_blank" onclick="LogClickCount(this,336);">Docker</a>
+<a title="OpenStack" href="http://g.csdn.net/5272925" target="_blank" onclick="LogClickCount(this,336);">OpenStack</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Spark" href="http://g.csdn.net/5272924" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="数据库" href="http://www.csdn.net/tag/数据库" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone " target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/云计算" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace " target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/大数据" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+</div>
+
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+            <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/yukin_xue" target="_blank">
+    <img src="http://avatar.csdn.net/E/6/0/1_yukin_xue.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/yukin_xue" class="user_name" target="_blank">yukin_xue</a></span>
+</div>
+<div class="interact">
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_guanzhu'])"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>
+</div>
+<div id="blog_medal">
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>41352次</span></li>
+    <li>积分：<span>686分</span></li>
+    <li>排名：<span>千里之外</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>20篇</span></li>
+    <li>转载：<span>74篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>5条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";
+            window.location.href = url;
+        }   
+    });
+</script><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1095236" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">C++基础</a><span>(29)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1089907" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">linux</a><span>(17)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1095520" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">STL</a><span>(4)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1108262" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">数据结构</a><span>(4)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1308917" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">多线程</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1309077" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">网络编程</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/yukin_xue/article/category/1537647" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">python</a><span>(3)</span>
+            </li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="http://blog.csdn.net/yukin_xue/article/month/2014/03">2014年03月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2014/02">2014年02月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2014/01">2014年01月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/12">2013年12月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/10">2013年10月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/09">2013年09月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/08">2013年08月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/06">2013年06月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/04">2013年04月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2013/01">2013年01月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/12">2012年12月</a><span>(11)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/11">2012年11月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/09">2012年09月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/07">2012年07月</a><span>(12)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/06">2012年06月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/05">2012年05月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/04">2012年04月</a><span>(12)</span></li><li><a href="http://blog.csdn.net/yukin_xue/article/month/2012/03">2012年03月</a><span>(14)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/yukin_xue/article/details/7540011" title="pugixml库的使用（by yukin_xue)">pugixml库的使用（by yukin_xue)</a><span>(3865)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7653482" title="代码覆盖率——gcov lcov的使用">代码覆盖率——gcov lcov的使用</a><span>(3015)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7391897" title="C++ 数组array与vector的比较">C++ 数组array与vector的比较</a><span>(1572)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7437673" title="public,protect,private访问权限">public,protect,private访问权限</a><span>(1530)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7754339" title="HTTP协议之chunk编码">HTTP协议之chunk编码</a><span>(1429)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7437742" title="重写、覆盖、重载、隐藏、多态几个概念的区别分析">重写、覆盖、重载、隐藏、多态几个概念的区别分析</a><span>(1235)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7452905" title="C++深拷贝和浅拷贝区别">C++深拷贝和浅拷贝区别</a><span>(1214)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7431498" title="中继器、集线器、网桥、交换机、路由器、网关分别在七层协议的那几层？">中继器、集线器、网桥、交换机、路由器、网关分别在七层协议的那几层？</a><span>(1012)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7652154" title="linux C C++ 字符集转换,UTF-8,GB2312">linux C C++ 字符集转换,UTF-8,GB2312</a><span>(936)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/7437717" title="switch(e)">switch(e)</a><span>(863)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/yukin_xue/article/details/7437742" title="重写、覆盖、重载、隐藏、多态几个概念的区别分析">重写、覆盖、重载、隐藏、多态几个概念的区别分析</a><span>(1)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/11526863" title="shp文件的读取">shp文件的读取</a><span>(1)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/11209283" title="C++读写excel文件（三）—— 用OLE读写（by yukin_xue)">C++读写excel文件（三）—— 用OLE读写（by yukin_xue)</a><span>(1)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/11203979" title="C++读写excel文件（一）—— 用ODBC读写（by yukin_xue)">C++读写excel文件（一）—— 用ODBC读写（by yukin_xue)</a><span>(1)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/9769803" title="python 读取中文文件名/中文路径">python 读取中文文件名/中文路径</a><span>(1)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/8771106" title="Windows、Unix、Mac不同操作系统的换行问题-剖析回车符\r和换行符\n">Windows、Unix、Mac不同操作系统的换行问题-剖析回车符\r和换行符\n</a><span>(0)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/9128521" title="hash_map和map的区别">hash_map和map的区别</a><span>(0)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/8481791" title="Subversion和TortoiseSVN安装与配置">Subversion和TortoiseSVN安装与配置</a><span>(0)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/8349860" title="编程命名中的7+1个提示">编程命名中的7+1个提示</a><span>(0)</span>
+</li>
+<li>
+<a href="/yukin_xue/article/details/8349835" title="socket 科普文章">socket 科普文章</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend"></ul>
+</div>
+<script type="text/javascript">
+ new Ad(12, 'ad_commend');
+</script><div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/yukin_xue/article/details/9769803#comments">python 读取中文文件名/中文路径</a>
+    <p style="margin:0px;"><a href="/qianmianyuan" class="user_name">qianmianyuan</a>:
+谢谢！
+    </p>
+    </li>
+    <li>
+   
+         <a href="/yukin_xue/article/details/11209283#comments">C++读写excel文件（三）—— 用OLE读写（by yukin_xue)</a>
+    <p style="margin:0px;"><a href="/gaoyang610" class="user_name">gaoyang610</a>:
+你好，你在编译的时候这句lpDis = excel_books_.Add(COleVariant(f...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/yukin_xue/article/details/11526863#comments">shp文件的读取</a>
+    <p style="margin:0px;"><a href="/sXINXINb" class="user_name">sXINXINb</a>:
+你好，能不能把您那个读取SHP文件的小程序发给我学习一下，谢谢啦，E-mail:541904948@...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/yukin_xue/article/details/11203979#comments">C++读写excel文件（一）—— 用ODBC读写（by yukin_xue)</a>
+    <p style="margin:0px;"><a href="/solothink" class="user_name">solothink</a>:
+同学，可以实现读的，你要的话我发个示例代码给你。我的邮箱solothink@163.com。我在看你...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/yukin_xue/article/details/7437742#comments">重写、覆盖、重载、隐藏、多态几个概念的区别分析</a>
+    <p style="margin:0px;"><a href="/b_rongji" class="user_name">b_rongji</a>:
+终于算是看明白了
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="http://csdnimg.cn/rabbit/cnick/cnick.js"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+
+
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=1264456"></script>
+<script type="text/javascript">
+    document.write('<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js?' + Math.floor(new Date() / 120000).toString(36) + '="></' + 'script>');
+</script>
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript" src="http://zz.csdn.net/js/count.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a>"
+                    + "<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+    });
+</script>
+
+    </div>
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://static.csdn.net/public/common/toolbar/js/toolbar.js"></script>     <!--new top-->
+</body>
+</html>

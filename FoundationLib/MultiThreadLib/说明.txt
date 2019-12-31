@@ -1,0 +1,5 @@
+Old CThreadBase 类，一旦 stop 之后，将不能再次执行。
+
+新 CThreadBase 类，修正了这一不足，并且提供 close 方法（即执行 ExitThread）来退出线程
+
+如果线程所作工作仅仅执行一次，那么 Old CThreadBase 类会完成得很好。

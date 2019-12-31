@@ -1,0 +1,26 @@
+// IArcWeight.cpp: implementation of the IArcWeight class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "IArcWeight.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+IArcWeight::IArcWeight()
+{
+
+}
+
+IArcWeight::~IArcWeight()
+{
+
+}

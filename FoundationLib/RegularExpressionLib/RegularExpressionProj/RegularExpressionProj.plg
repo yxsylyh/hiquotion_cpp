@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RegularExpressionProj - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSPD684.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/RegularExpressionProj.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\yuxs\¹¤×÷\´úÂë¿â\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\CharListChecker.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSPD684.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSPD685.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/RegularExpressionProj.pdb" /debug /machine:I386 /out:"Debug/RegularExpressionProj.exe" /pdbtype:sept 
+".\Debug\RegularExpressionProj.obj"
+".\Debug\StdAfx.obj"
+".\Debug\ConcatRegularExpression.obj"
+".\Debug\DigitRegularExpression.obj"
+".\Debug\EmptyRegularExpression.obj"
+".\Debug\KleenStarRegularExpression.obj"
+".\Debug\KleenStartPlusRegularExpression.obj"
+".\Debug\LowerRegularExpression.obj"
+".\Debug\OrRegularExpression.obj"
+".\Debug\RangeRegularExpression.obj"
+".\Debug\StringRegularExpression.obj"
+".\Debug\SymbolRegularExpression.obj"
+".\Debug\UpperRegularExpression.obj"
+".\Debug\AndChecker.obj"
+".\Debug\CharChecker.obj"
+".\Debug\CharListChecker.obj"
+".\Debug\ICharChecker.obj"
+".\Debug\OrChecker.obj"
+".\Debug\RangeCharChecker.obj"
+".\Debug\SymbolCharChecker.obj"
+".\Debug\RegularExpressionProj.res"
+".\Debug\NotRegularExpression.obj"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSPD685.tmp"
+<h3>Output Window</h3>
+Compiling...
+CharListChecker.cpp
+Linking...
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSPD916.tmp" with contents
+[
+/nologo /o"Debug/RegularExpressionProj.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\RegularExpressionProj.sbr"
+".\Debug\ConcatRegularExpression.sbr"
+".\Debug\DigitRegularExpression.sbr"
+".\Debug\EmptyRegularExpression.sbr"
+".\Debug\KleenStarRegularExpression.sbr"
+".\Debug\KleenStartPlusRegularExpression.sbr"
+".\Debug\LowerRegularExpression.sbr"
+".\Debug\OrRegularExpression.sbr"
+".\Debug\RangeRegularExpression.sbr"
+".\Debug\StringRegularExpression.sbr"
+".\Debug\SymbolRegularExpression.sbr"
+".\Debug\UpperRegularExpression.sbr"
+".\Debug\AndChecker.sbr"
+".\Debug\CharChecker.sbr"
+".\Debug\CharListChecker.sbr"
+".\Debug\ICharChecker.sbr"
+".\Debug\OrChecker.sbr"
+".\Debug\RangeCharChecker.sbr"
+".\Debug\SymbolCharChecker.sbr"
+".\Debug\NotRegularExpression.sbr"]
+Creating command line "bscmake.exe @C:\Users\a\AppData\Local\Temp\RSPD916.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+RegularExpressionProj.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

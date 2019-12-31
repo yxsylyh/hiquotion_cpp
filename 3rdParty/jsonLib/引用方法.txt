@@ -1,0 +1,23 @@
+在vc工程中需要包含以下几个文件
+
+json_batchallocator.h
+json_reader.cpp
+json_tool.h
+json_value.cpp
+json_writer.cpp
+
+
+解析方法：
+
+#include <C++/3rdParty/jsonLib/reader.h>
+
+    Json::Reader reader;
+    Json::Value root;
+    if (!reader.parse(json, root, false))
+    {
+        return -1;
+    }
+
+    // asString() 方法，如果字符串为空，则会报错
+    std::string name = root["name"].asCString();
+    int age = root["age"].asInt();

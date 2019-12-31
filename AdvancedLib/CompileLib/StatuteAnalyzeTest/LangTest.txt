@@ -1,0 +1,36 @@
+Z=>Lang
+Lang=>centences
+centences=>block
+block=>"{" centences "}"
+centences=>centences centence
+centece=>statement ";"
+statement=>setvalue
+statement=>if
+setvalue=>varType var "=" number
+varType=>"int"
+var=>"a"
+var=>"b"
+var=>"c"
+if=>"if" "(" judgement ")" block
+if=>if "else" block
+judgement=>expression judge expression
+expression=>"(" expression ")"
+expression=>expression "+" expression
+expression=>expression "-" expression
+expression=>number
+number=>"0"
+number=>"1"
+number=>"2"
+number=>"3"
+number=>"4"
+number=>"5"
+number=>"6"
+number=>"7"
+number=>"8"
+number=>"9"
+judge=>"=="
+judge=>"!="
+judge=>">"
+judge=>">="
+judge=>"<"
+judge=>"<="

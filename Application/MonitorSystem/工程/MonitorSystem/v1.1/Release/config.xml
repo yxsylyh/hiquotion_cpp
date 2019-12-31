@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<MonitorSystem version="1.0">
+  <!-- 每 5 分钟轮询一次 -->
+  <!-- 条件满足 1 次则报警 -->
+  <Monitor interval="300" times="1">
+    <MonitedObject type="HTTPRequest" status="Response">
+      <Url>http://127.0.0.1:8088/ResponseTest/servlet/resp</Url>
+      <Response>0</Response>
+    </MonitedObject>
+    <Alertor>
+      <Commands>
+        <Command>taskkill /im notepad.exe</Command>
+      </Commands>
+    </Alertor>
+  </Monitor>
+</MonitorSystem>

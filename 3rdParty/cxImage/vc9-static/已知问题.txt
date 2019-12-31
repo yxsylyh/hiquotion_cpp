@@ -1,0 +1,1 @@
+与 WebSocket_static.lib 使用时，会出现 __snprintf 函数已经在 WebSocket_static.obj 定义的错误，无法编译通过。此时，可以用 CxImage 的 DLL，可以编译通过。

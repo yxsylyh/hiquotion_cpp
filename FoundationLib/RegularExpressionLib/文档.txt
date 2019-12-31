@@ -1,0 +1,42 @@
+正则表达式库
+
+开发文档
+
+首先有一个基类或称为接口，叫IRegularExpression，有一个方法是用来生成状态图的，叫genStatusGraph()，参数是转换器类，返回值是CStatusGraph类（状态图类请参看DataStructLib中的DiGraphicProj）。
+
+还有一个accept()方法，用来确定给定的字符是否满足该正则表达式，从而得知自动机的下一个状态是否可以接受。该方法的参数是一个字符。
+
+空表达式CEmptyRegularExpression。
+
+指定字符CSymbolRegularExpression（比如#，！等），构造函数可以传入一个指定的字符。
+private:
+	char m_char;
+
+x字符串CStringRegularExpression的正则表达式，构造函数可以传入一个指定的字符串。
+private:
+	vector<char> m_stringList;
+
+字符范围正则表达式CRangeRegularExpression，构造函数可以传入一个指定的字符范围。
+public:
+	void setRange(char from, char to);
+private:
+	char m_charFrom;
+	char m_charTo;
+
+引申为小写字母正则表达式CLowerRegularExpression、大写字母正则表达式CUpperRegularExpression、字母（包括大小写）正则表达式CLetterRegularExpression以及数字正则表达式CNumberRegularExpression。另外，还有可打印字符正则表达式CPrintalbeRegularExpression。
+
+连接正则表达式，CConcatRegularExpression。构造函数的两个参数，分别是两个上述的正则表达式。该表达式用来将两个表达式连接起来。
+private:
+	IRegularExpression *m_regularExpression1;
+	IRegularExpression *m_regularExpression2;
+
+或正则表达式，COrRegularExpression。构造函数也是两个正则表达式。
+private:
+	IRegularExpression *m_RegularExpression1;
+	IRegularExpression *m_RegularExpression2;
+
+克林闭包，CKleenStarRegularExpression。构造函数是一个正则表达式。
+private:
+	IRegularExpression *m_RegularExpression;
+
+

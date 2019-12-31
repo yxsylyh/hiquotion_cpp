@@ -1,0 +1,23 @@
+LNK2005错误：new delete new[] delete[] 已在libcmtd中定义
+
+在MFC程序中可能会出现这个编译错误。解决办法，即先编译MFC的lib再编译libcmt的lib即可。
+
+对于Debug模式：
+项目-->属性-->配置属性-->链接器-->输入-->附加依赖项-->Nafxcwd.lib;Libcmtd.lib;
+
+对于Release模式：
+位置相同-->Nafxcw.lib;Libcmt.lib;
+
+******如果是静态链接，就用下面的
+
+对于Debug模式
+1、多字节时
+nafxcwd.lib;msvcrtd.lib;
+2、Unicode时
+uafxcwd.lib;msvcrtd.lib;
+
+对于Release模式：
+1、多字节时
+nafxcw.lib;msvcrt.lib;
+2、Unicode时
+uafxcw.lib;msvcrt.lib;

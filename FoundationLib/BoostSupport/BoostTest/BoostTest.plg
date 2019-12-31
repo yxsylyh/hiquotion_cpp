@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BoostTest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP49.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/BoostTest.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ    /c 
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\BoostSupport\BoostTest\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP49.tmp" 
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP4A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/BoostTest.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ    /c 
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\BoostSupport\BoostTest\BoostTest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP4A.tmp" 
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP4B.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/BoostTest.pdb" /debug /machine:I386 /out:"Debug/BoostTest.exe" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\BoostTest.obj"
+".\Debug\BoostTest.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP4B.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+BoostTest.cpp
+d:\boost\boost_1_60_0\boost\config\compiler\visualc.hpp(43) : fatal error C1189: #error :  "Compiler not supported or configured - please reconfigure"
+执行 cl.exe 时出错.
+Creating command line "bscmake.exe /nologo /o"Debug/BoostTest.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\BoostTest.sbr""
+Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Debug\BoostTest.sbr': No such file or directory
+执行 bscmake.exe 时出错.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+BoostTest.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

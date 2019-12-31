@@ -1,0 +1,640 @@
+# Microsoft Developer Studio Generated Dependency File, included by StatuteAnalyze.mak
+
+.\StatuteAnalyze.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\filesyslib\fileoperation.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\concatregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\digitregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\lowerregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\notregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\orregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\symbolregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\upperregularexpression.h"\
+	"..\KernelLex\KernelLexer\KernelLexer.h"\
+	"..\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\lex\lexer\ilexstatusgraphbuilder.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\AbstractSyntaxTree\AbstractSyntaxTreeNode.h"\
+	".\AbstractSyntaxTree\CppConverter.h"\
+	".\AbstractSyntaxTree\IST2ASTConverter.h"\
+	".\StatuteAnalyze.h"\
+	".\StatuteAnalyzer\IStatuteAnalyzer.h"\
+	".\StatuteAnalyzer\IStatuteStatusGraphBuilder.h"\
+	".\StatuteAnalyzer\KernelStatuteAnalyzer.h"\
+	".\StatuteAnalyzer\KernelStatuteStatusGraphBuilder.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteAnalyzer.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	".\StatuteAnalyzer\StatuteStatusGraphBuilder.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	".\StatuteStatusMachine\StatuteStatusMachine.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\foundationlib\fileloglib\fileloglib\filelog.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\log.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\logbuilder.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\logconfig.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\loglevel.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\tinystr.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\tinyxml.h"\
+	"..\..\..\foundationlib\fileloglib\fileloglib\xmloperation.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MemManager\MemManager.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\MemManager\MemManager.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	
+
+.\StatuteAnalyzer\KernelStatuteAnalyzer.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\stringextlib\formattedstring.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\StatuteAnalyzer\IStatuteAnalyzer.h"\
+	".\StatuteAnalyzer\IStatuteStatusGraphBuilder.h"\
+	".\StatuteAnalyzer\KernelStatuteAnalyzer.h"\
+	".\StatuteAnalyzer\KernelStatuteStatusGraphBuilder.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteAnalyzer.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	".\StatuteAnalyzer\StatuteStatusGraphBuilder.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	".\StatuteStatusMachine\StatuteStatusMachine.h"\
+	
+
+.\StatuteAnalyzer\KernelStatuteStatusGraphBuilder.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\concatregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\digitregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\lowerregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\notregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\orregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\symbolregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\upperregularexpression.h"\
+	"..\..\..\foundationlib\stringextlib\formattedstring.h"\
+	"..\..\..\foundationlib\stringextlib\stringext.h"\
+	"..\KernelLex\KernelLexer\KernelLexer.h"\
+	"..\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\lex\lexer\ilexstatusgraphbuilder.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\MemManager\MemManager.h"\
+	".\StatuteAnalyzer\IStatuteStatusGraphBuilder.h"\
+	".\StatuteAnalyzer\KernelStatuteStatusGraphBuilder.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	".\StatuteAnalyzer\StatuteStatusGraphBuilder.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\StatuteAnalyzer\StatuteAnalyzer.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\concatregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\digitregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\lowerregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\notregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\orregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\symbolregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\upperregularexpression.h"\
+	"..\..\..\foundationlib\stringextlib\stringext.h"\
+	"..\KernelLex\KernelLexer\KernelLexer.h"\
+	"..\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\lex\lexer\ilexstatusgraphbuilder.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\MemManager\MemManager.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteAnalyzer.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	".\StatuteStatusMachine\StatuteStatusMachine.h"\
+	
+
+.\StatuteAnalyzer\StatuteItemList.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\MemManager\MemManager.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	
+
+.\StatuteAnalyzer\StatuteList.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	
+
+.\StatuteAnalyzer\StatuteStatusGraphBuilder.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\MemManager\MemManager.h"\
+	".\StatuteAnalyzer\IStatuteStatusGraphBuilder.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteList.h"\
+	".\StatuteAnalyzer\StatuteStatusGraphBuilder.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\StatuteAnalyzer\StatuteTreeNode.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\StatuteStatusGraph\StatuteStatusGraph.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\StatuteStatusGraph\StatuteStatusGraphArc.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\StatuteStatusGraph\StatuteStatusGraphNode.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\StatuteStatusMachine\StatuteStatusMachine.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteStatusGraph\StatuteStatusGraph.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	".\StatuteStatusMachine\StatuteStatusMachine.h"\
+	
+
+..\Lex\Lexer\Lexer.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	
+
+..\Lex\LexStatusMachine\LexStatusMachine.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	
+
+..\Lex\LexStatusGraph\LexStatusGraph.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	
+
+..\Lex\LexStatusGraph\StatusGraphArc.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	
+
+..\Lex\LexStatusGraph\StatusGraphNode.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	
+
+..\..\..\FoundationLib\StringExtLib\FormattedString.cpp : \
+	"..\..\..\foundationlib\stringextlib\formattedstring.h"\
+	
+
+..\..\..\FoundationLib\StringExtLib\StringExt.cpp : \
+	"..\..\..\foundationlib\stringextlib\stringext.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\ConcatRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\concatregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\DigitRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\digitregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\EmptyRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\emptyregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStarRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\kleenstarregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStartPlusRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\kleenstartplusregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\LowerRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\lowerregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\NotRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\notregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\OrRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\orregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\RangeRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\StringRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\stringregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\SymbolRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\symbolregularexpression.h"\
+	
+
+..\..\..\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\UpperRegularExpression.cpp : \
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\upperregularexpression.h"\
+	
+
+..\KernelLex\KernelLexer\KernelLexer.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\concatregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\digitregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\lowerregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\notregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\orregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\symbolregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\upperregularexpression.h"\
+	"..\KernelLex\KernelLexer\KernelLexer.h"\
+	"..\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\lex\lexer\ilexstatusgraphbuilder.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	
+
+..\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\concatregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\digitregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\lowerregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\notregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\orregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\rangeregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\symbolregularexpression.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\upperregularexpression.h"\
+	"..\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.h"\
+	"..\lex\lexer\ilexstatusgraphbuilder.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	
+
+..\..\..\FoundationLib\FileLogLib\FileLogLib\Log.cpp : \
+	"..\..\..\foundationlib\filesyslib\folderoperation.h"\
+	
+
+..\..\..\FoundationLib\FileLogLib\FileLogLib\LogBuilder.cpp : \
+	"..\..\..\foundationlib\filesyslib\folderoperation.h"\
+	
+
+..\..\..\FoundationLib\FileLogLib\FileLogLib\LogConfig.cpp : \
+	"..\..\..\foundationlib\filesyslib\folderoperation.h"\
+	
+
+..\..\..\FoundationLib\FileLogLib\FileLogLib\LogDef.cpp : \
+	"..\..\..\foundationlib\fileloglib\fileloglib\logdef.h"\
+	
+
+..\..\..\FoundationLib\FileSysLib\FileOperation.cpp : \
+	"..\..\..\foundationlib\filesyslib\fileoperation.h"\
+	"..\..\..\foundationlib\filesyslib\folderoperation.h"\
+	
+
+..\..\..\FoundationLib\FileSysLib\FolderOperation.cpp : \
+	"..\..\..\foundationlib\filesyslib\folderoperation.h"\
+	
+
+.\AbstractSyntaxTree\AbstractSyntaxTree.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\AbstractSyntaxTree\AbstractSyntaxTree.h"\
+	".\AbstractSyntaxTree\AbstractSyntaxTreeNode.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\AbstractSyntaxTree\AbstractSyntaxTreeNode.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\AbstractSyntaxTree\AbstractSyntaxTreeNode.h"\
+	
+
+.\AbstractSyntaxTree\CppConverter.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\AbstractSyntaxTree\AbstractSyntaxTreeNode.h"\
+	".\AbstractSyntaxTree\CppConverter.h"\
+	".\AbstractSyntaxTree\IST2ASTConverter.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	
+
+.\AbstractSyntaxTree\IST2ASTConverter.cpp : \
+	"..\..\..\FoundationLib\DataStructLib\PointerList.h"\
+	"..\..\..\foundationlib\datastructlib\pointerstack.h"\
+	"..\..\..\FoundationLib\DataStructLib\SelfContainer\Graph.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgrapharc.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selfgraphnode.h"\
+	"..\..\..\foundationlib\datastructlib\selfcontainer\selftreenode.h"\
+	"..\..\..\foundationlib\datastructlib\valuelist.h"\
+	"..\..\..\foundationlib\regularexpressionlib\regularexpressionproj\regularexpression\iregularexpression.h"\
+	"..\lex\lexer\ilexer.h"\
+	"..\Lex\Lexer\Lexer.h"\
+	"..\Lex\LexStatusGraph\LexStatusGraph.h"\
+	"..\Lex\LexStatusGraph\StatusGraphArc.h"\
+	"..\Lex\LexStatusGraph\StatusGraphNode.h"\
+	"..\Lex\LexStatusMachine\LexStatusMachine.h"\
+	".\AbstractSyntaxTree\AbstractSyntaxTreeNode.h"\
+	".\AbstractSyntaxTree\IST2ASTConverter.h"\
+	".\statuteanalyzer\statute.h"\
+	".\StatuteAnalyzer\StatuteItemList.h"\
+	".\StatuteAnalyzer\StatuteTreeNode.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphArc.h"\
+	".\StatuteStatusGraph\StatuteStatusGraphNode.h"\
+	

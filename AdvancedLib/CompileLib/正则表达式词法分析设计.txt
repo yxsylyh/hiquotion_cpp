@@ -1,0 +1,39 @@
+字符集：
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789[]*-
+
+可能出现的情况：
+re<--#（数字简写）
+re<--@（字母简写）
+re<--re|re
+re<--[re]
+re<--re*
+re<--rere
+re<--#-#
+re<--@-@
+
+算法初步：
+
+读一个字符x
+如果是字母或数字
+    如果前面没出现过[，则作为Symbol表达式添加到RE列表
+    否则
+        若队列SimpleOR有字符，则
+            取出该字符，并与x作为Range表达式添加到OR列表
+            continue
+        若last队列中有字符，则
+            取出该字符作为Symbol表达式添加到OR列表
+            continue
+        将x写入last队列
+如果是[，则
+    将last队列中的字符作为Symbol表达式添加到RE列表
+    置isInQuote为TRUE
+如果是]
+    将OR列表中的表达式取出，并添加到OR表达式中，并将OR表达式添加到RE列表
+如果是-，则
+    将last队列中的字符写入SimpleOR队列
+    置isInQuote为FALSE
+如果是*
+    如果RE列表为空，则
+        报错
+        返回
+    取出RE列表中最后一个表达式，添加到KLinStar表达式，并将KlinStar表达式添加到RE列表

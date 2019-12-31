@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SoftList - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/SoftList.res" /d "_DEBUG" /d "_AFXDLL" "E:\yuxs\编程\工程\vcp\软件自动安装\SoftList\SoftList2\SoftList.rc"" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP7365.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/SoftList.pdb" /debug /machine:I386 /out:"Debug/SoftList.exe" /pdbtype:sept 
+".\Debug\DialogItem.obj"
+".\Debug\ListItemDlg.obj"
+".\Debug\SoftList.obj"
+".\Debug\SoftListBox.obj"
+".\Debug\SoftListDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Catlog.obj"
+".\Debug\Command.obj"
+".\Debug\Package.obj"
+".\Debug\Parameter.obj"
+".\Debug\SAIConfig.obj"
+".\Debug\Software.obj"
+".\Debug\FileOperation.obj"
+".\Debug\XmlOperation.obj"
+".\Debug\tinystr.obj"
+".\Debug\tinyxml.obj"
+".\Debug\tinyxmlerror.obj"
+".\Debug\tinyxmlparser.obj"
+".\Debug\SoftList.res"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP7365.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+SoftList.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

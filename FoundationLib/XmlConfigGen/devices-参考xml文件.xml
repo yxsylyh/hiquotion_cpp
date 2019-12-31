@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<vmc version="1.0">
+	<description>视频监控中心</description>
+	<server description="服务端入口">
+		<pusher ip="192.168.6.140" port="554" description="RTSP推流服务端，可用于监控、直播" />
+		<recorder ip="0.0.0.0" port="8080" description="录制服务端" />
+		<media ip="0.0.0.1" port="80" description="媒体文件存放中心" />
+	</server>
+	<MonitorInfo>
+		<area name="工大软件">
+			<endpoint type="rtsp" name="软件技术部1" ip="192.168.1.101" port="80" />
+			<endpoint type="rtsp" name="软件技术部2" ip="192.168.1.102" port="80" />
+			<endpoint type="rtsp" name="test" ip="127.0.0.1" port="5555" />
+		</area>
+	</MonitorInfo>
+</vmc>

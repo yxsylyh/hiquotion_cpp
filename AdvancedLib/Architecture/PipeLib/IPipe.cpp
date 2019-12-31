@@ -1,0 +1,33 @@
+// IPipe.cpp: implementation of the IPipe class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "IPipe.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+IPipe::IPipe()
+: m_name("")
+{
+
+}
+
+IPipe::IPipe(CString name)
+: m_name(name)
+{
+
+}
+
+IPipe::~IPipe()
+{
+
+}

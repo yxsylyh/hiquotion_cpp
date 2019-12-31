@@ -1,0 +1,1 @@
+请复制 Hiquotion-BigLib\CKFtpLib 下的 lib 文件到你的工程中。

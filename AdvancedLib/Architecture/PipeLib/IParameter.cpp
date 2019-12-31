@@ -1,0 +1,27 @@
+// IParameter.cpp: implementation of the IParameter class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "IParameter.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+IParameter::IParameter()
+: m_isDestroy(FALSE)
+{
+
+}
+
+IParameter::~IParameter()
+{
+
+}

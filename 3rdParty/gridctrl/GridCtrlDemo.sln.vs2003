@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GridCtrlDemo", "GridCtrlDemo.vcproj", "{4CD8F998-5BE3-45A9-B396-E854F999CFF7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Unicode = Debug Unicode
+		Release = Release
+		Release Unicode = Release Unicode
+		ReleaseStatic = ReleaseStatic
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Debug.ActiveCfg = Debug|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Debug.Build.0 = Debug|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Debug Unicode.ActiveCfg = Debug Unicode|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Debug Unicode.Build.0 = Debug Unicode|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Release.ActiveCfg = Release|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Release.Build.0 = Release|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Release Unicode.ActiveCfg = Release Unicode|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.Release Unicode.Build.0 = Release Unicode|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.ReleaseStatic.ActiveCfg = ReleaseStatic|Win32
+		{4CD8F998-5BE3-45A9-B396-E854F999CFF7}.ReleaseStatic.Build.0 = ReleaseStatic|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

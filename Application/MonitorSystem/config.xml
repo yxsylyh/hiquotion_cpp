@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<MonitorSystem version="1.0">
+  <!-- 每 10 分钟轮询一次 -->
+  <!-- 条件满足 1 次则报警 -->
+  <Monitor interval="10" times="1">
+    <!-- 监控文件的大小 -->
+    <MonitedObject type="File" status="Size">
+      <!-- 文件所在路径 -->
+<!--      <Path>D:\cjb\DataUp\Logs\log%year%%month%%day%.log"</Path>  -->
+      <Path>F:\工作\项目\省级社保生存认证子系统\入库程序\城居保\Monitor\工程\MonitorSystem\Debug\log%year%%month%%day%.log"</Path>
+      <!-- 所满足的条件是文件大小不改变 -->
+      <Condition>NotChanged</Condition>
+    </MonitedObject>
+    <Alertor>
+      <Commands>
+        <Command>taskkill /im notepad.exe</Command>
+      </Commands>
+    </Alertor>
+  </Monitor>
+  <Monitor interval="5" times="3">
+    <MonitedObject type="File" status="Size">
+      <Path>F:\工作\项目\省级社保生存认证子系统\入库程序\城居保\Monitor\工程\MonitorSystem\Debug\log%year%%month%%day%.log"</Path>
+      <Condition>NotChanged</Condition>
+    </MonitedObject>
+    <Alertor>
+      <Commands>
+        <Command>taskkill /im iexplore.exe</Command>
+      </Commands>
+    </Alertor>
+  </Monitor>
+</MonitorSystem>

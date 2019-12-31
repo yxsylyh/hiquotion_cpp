@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DiGraphProj - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/DiGraphProj.res" /d "_DEBUG" /d "_AFXDLL" "E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\DiGraphProj.rc"" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP718C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/DiGraphProj.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\DiGraphProj.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\Arc.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\DiGraphic.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\IArcWeight.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\INodeData.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\Node.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\StatusGraphic.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\RE2SGConverter\RE2SGConverter.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\ConcatRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\DigitRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\EmptyRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStarRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\LowerRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\OrRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\RangeRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\SymbolRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\UpperRegularExpression.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\AndChecker.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\CharChecker.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\CharListChecker.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\ICharChecker.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\OrChecker.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\RangeCharChecker.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\CharChecker\SymbolCharChecker.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP718C.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP718D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/DiGraphProj.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\Graph\DiGraphProj\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP718D.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP718E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/DiGraphProj.pdb" /debug /machine:I386 /out:"Debug/DiGraphProj.exe" /pdbtype:sept 
+".\Debug\DiGraphProj.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Arc.obj"
+".\Debug\DiGraphic.obj"
+".\Debug\IArcWeight.obj"
+".\Debug\INodeData.obj"
+".\Debug\Node.obj"
+".\Debug\StatusGraphic.obj"
+".\Debug\RE2SGConverter.obj"
+".\Debug\ConcatRegularExpression.obj"
+".\Debug\DigitRegularExpression.obj"
+".\Debug\EmptyRegularExpression.obj"
+".\Debug\KleenStarRegularExpression.obj"
+".\Debug\LowerRegularExpression.obj"
+".\Debug\OrRegularExpression.obj"
+".\Debug\RangeRegularExpression.obj"
+".\Debug\SymbolRegularExpression.obj"
+".\Debug\UpperRegularExpression.obj"
+".\Debug\AndChecker.obj"
+".\Debug\CharChecker.obj"
+".\Debug\CharListChecker.obj"
+".\Debug\ICharChecker.obj"
+".\Debug\OrChecker.obj"
+".\Debug\RangeCharChecker.obj"
+".\Debug\SymbolCharChecker.obj"
+".\Debug\DiGraphProj.res"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP718E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+DiGraphProj.cpp
+Arc.cpp
+DiGraphic.cpp
+IArcWeight.cpp
+INodeData.cpp
+Node.cpp
+StatusGraphic.cpp
+RE2SGConverter.cpp
+ConcatRegularExpression.cpp
+DigitRegularExpression.cpp
+EmptyRegularExpression.cpp
+KleenStarRegularExpression.cpp
+LowerRegularExpression.cpp
+OrRegularExpression.cpp
+RangeRegularExpression.cpp
+SymbolRegularExpression.cpp
+UpperRegularExpression.cpp
+AndChecker.cpp
+CharChecker.cpp
+CharListChecker.cpp
+Generating Code...
+Compiling...
+ICharChecker.cpp
+OrChecker.cpp
+RangeCharChecker.cpp
+SymbolCharChecker.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+DiGraphProj.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

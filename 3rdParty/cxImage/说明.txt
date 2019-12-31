@@ -1,0 +1,3 @@
+使用时，需要在工程中创建cxImage目录，然后将lib目录复制到刚刚创建的cxImage目录下
+
+vc2019-static中的unicode目录下的lib文件，暂时未用，似乎会使编译有问题，没解决，所以即使unicode工程也用的非unicode库。

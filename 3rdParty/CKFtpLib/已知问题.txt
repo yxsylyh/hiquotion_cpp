@@ -1,0 +1,8 @@
+在下载文件的时候，依赖于FTp下载命令RETR的返回码150中的信息，来获取FTP服务端的文件大小。导致使用Server-U时，能够回调下载进度，而使用FileZilla Server时，就显示不出来下载进度。原因是Server-U返回RETR 150的信息中有文件大小，而FileZilla Server的返回信息中没有文件大小。
+
+Server-U版本：6.4.0.6
+FileZilla Server版本：0.9.42 beta
+
+为什么要依赖于返回信息呢？不同的FTP服务端的返回信息可能不一样啊，FTP协议里恐怕也没规定返回信息里必须包含什么吧。查看CkFtp2类库与FTP服务端的交互过程，从FTP服务端获取的Feature中，明明有SIZE命令（两个FTP服务端都有），为什么不用呢？即使依赖于返回信息，也应该作为最后没有办法的办法（比如FTP服务端不支持SIZE命令）才使用啊！
+
+FileZilla Server v0.9.42 beta，据说是支持xp的最后一个版本，也许新版本能支持 150 中显示文件大小（未去证实）。

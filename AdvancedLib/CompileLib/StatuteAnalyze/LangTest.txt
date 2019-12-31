@@ -1,0 +1,39 @@
+Z=>Lang
+Lang=>centences
+centences=>block
+block=>"{" centences "}"
+centences=>centence
+centences=>centences centence
+centence=>statement ";"
+centence=>If
+centence=>While
+centence=>DoWhile
+statement=>declare
+statement=>setvalue
+statement=>declare_setvalue
+declare=>varType var
+setvalue=>var "=" expression
+declare_setvalue=>varType var "=" expression
+varType=>"int"
+var=>"a"
+var=>"b"
+var=>"c"
+If=>"if" "(" expression ")" centenceBlock
+If=>"if" "(" expression ")" centenceBlock "else" centenceBlock
+While=>"while" "(" expression ")" centenceBlock
+DoWhile=>"do" centenceBlock "while" "(" expression ")"
+centenceBlock=>block
+centenceBlock=>centence
+expression=>expression judge expression
+expression=>"(" expression ")"
+expression=>expression "+" expression
+expression=>expression "-" expression
+expression=>lexnumber
+expression=>var
+lexnumber=>%number%
+judge=>"=="
+judge=>"!="
+judge=>">"
+judge=>">="
+judge=>"<"
+judge=>"<="

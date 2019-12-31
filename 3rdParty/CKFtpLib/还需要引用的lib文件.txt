@@ -1,0 +1,1 @@
+crypt32.lib WS2_32.LIB 

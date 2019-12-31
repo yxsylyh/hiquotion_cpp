@@ -1,0 +1,26 @@
+// IEventRaisable.cpp: implementation of the IEvent class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "IEvent.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+IEventRaisable::IEventRaisable()
+{
+
+}
+
+IEventRaisable::~IEventRaisable()
+{
+
+}

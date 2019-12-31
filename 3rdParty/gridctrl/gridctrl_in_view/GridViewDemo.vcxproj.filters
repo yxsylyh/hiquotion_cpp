@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a05699ee-e0f2-4b7a-b604-c76aa51f365f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Grid Source">
+      <UniqueIdentifier>{0838bf49-ada2-47bd-912f-c7cfac8a3c7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{94a98a94-26aa-4a0a-b6bc-f1c2026e6f90}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Grid Header">
+      <UniqueIdentifier>{d7ab1975-0606-409b-bfb9-2805048b34b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5e23d4bd-a400-4491-a3dc-10fedd0ac1fb}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridViewDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridViewDemoDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridViewDemoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GridCtrl_src\GridCell.cpp">
+      <Filter>Source Files\Grid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GridCtrl_src\GridCellBase.cpp">
+      <Filter>Source Files\Grid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GridCtrl_src\GridCtrl.cpp">
+      <Filter>Source Files\Grid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GridCtrl_src\GridDropTarget.cpp">
+      <Filter>Source Files\Grid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GridCtrl_src\InPlaceEdit.cpp">
+      <Filter>Source Files\Grid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GridCtrl_src\TitleTip.cpp">
+      <Filter>Source Files\Grid Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GridViewDemo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridViewDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridViewDemoDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridViewDemoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\CellRange.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\GridCell.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\GridCellBase.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\GridCtrl.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\GridDropTarget.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\InPlaceEdit.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\MemDC.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GridCtrl_src\TitleTip.h">
+      <Filter>Header Files\Grid Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GridViewDemo.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\GridViewDemo.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\GridViewDemoDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,236 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: StatuteAnalyze - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/StatuteAnalyze.res" /d "_DEBUG" /d "_AFXDLL" "D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyze.rc"" 
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP114.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/StatuteAnalyze.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyze.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\MemManager\MemManager.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyzer\StatuteAnalyzer.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyzer\StatuteItemList.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyzer\StatuteList.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyzer\StatuteStatusGraphBuilder.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteAnalyzer\StatuteTreeNode.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteStatusGraph\StatuteStatusGraph.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteStatusGraph\StatuteStatusGraphArc.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteStatusGraph\StatuteStatusGraphNode.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StatuteStatusMachine\StatuteStatusMachine.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\Lex\Lexer\Lexer.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusMachine\LexStatusMachine.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusGraph\LexStatusGraph.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusGraph\StatusGraphArc.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusGraph\StatusGraphNode.cpp"
+"D:\Hiquotion\C++\FoundationLib\StringExtLib\FormattedString.cpp"
+"D:\Hiquotion\C++\FoundationLib\StringExtLib\StringExt.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\ConcatRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\DigitRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\EmptyRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStarRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStartPlusRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\LowerRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\NotRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\OrRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\RangeRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\StringRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\SymbolRegularExpression.cpp"
+"D:\Hiquotion\C++\FoundationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\UpperRegularExpression.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\KernelLexer\KernelLexer.cpp"
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\FileLog.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\Log.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\LogBuilder.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\LogConfig.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\LogDef.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\LogLevel.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\tinystr.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\tinyxml.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\tinyxmlerror.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\tinyxmlparser.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileLogLib\FileLogLib\XmlOperation.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileSysLib\FileOperation.cpp"
+"D:\Hiquotion\C++\FoundationLib\FileSysLib\FolderOperation.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP114.tmp" 
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP115.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/StatuteAnalyze.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Hiquotion\C++\AdvancedLib\CompileLib\StatuteAnalyze\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP115.tmp" 
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP116.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/StatuteAnalyze.pdb" /debug /machine:I386 /out:"Debug/StatuteAnalyze.exe" /pdbtype:sept 
+".\Debug\StatuteAnalyze.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MemManager.obj"
+".\Debug\StatuteAnalyzer.obj"
+".\Debug\StatuteItemList.obj"
+".\Debug\StatuteList.obj"
+".\Debug\StatuteStatusGraphBuilder.obj"
+".\Debug\StatuteTreeNode.obj"
+".\Debug\StatuteStatusGraph.obj"
+".\Debug\StatuteStatusGraphArc.obj"
+".\Debug\StatuteStatusGraphNode.obj"
+".\Debug\StatuteStatusMachine.obj"
+".\Debug\Lexer.obj"
+".\Debug\LexStatusMachine.obj"
+".\Debug\LexStatusGraph.obj"
+".\Debug\StatusGraphArc.obj"
+".\Debug\StatusGraphNode.obj"
+".\Debug\FormattedString.obj"
+".\Debug\StringExt.obj"
+".\Debug\ConcatRegularExpression.obj"
+".\Debug\DigitRegularExpression.obj"
+".\Debug\EmptyRegularExpression.obj"
+".\Debug\KleenStarRegularExpression.obj"
+".\Debug\KleenStartPlusRegularExpression.obj"
+".\Debug\LowerRegularExpression.obj"
+".\Debug\NotRegularExpression.obj"
+".\Debug\OrRegularExpression.obj"
+".\Debug\RangeRegularExpression.obj"
+".\Debug\StringRegularExpression.obj"
+".\Debug\SymbolRegularExpression.obj"
+".\Debug\UpperRegularExpression.obj"
+".\Debug\KernelLexer.obj"
+".\Debug\KernelLexStatusGraphBuilder.obj"
+".\Debug\FileLog.obj"
+".\Debug\Log.obj"
+".\Debug\LogBuilder.obj"
+".\Debug\LogConfig.obj"
+".\Debug\LogDef.obj"
+".\Debug\LogLevel.obj"
+".\Debug\tinystr.obj"
+".\Debug\tinyxml.obj"
+".\Debug\tinyxmlerror.obj"
+".\Debug\tinyxmlparser.obj"
+".\Debug\XmlOperation.obj"
+".\Debug\FileOperation.obj"
+".\Debug\FolderOperation.obj"
+".\Debug\StatuteAnalyze.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP116.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+StatuteAnalyze.cpp
+MemManager.cpp
+StatuteAnalyzer.cpp
+StatuteItemList.cpp
+StatuteList.cpp
+StatuteStatusGraphBuilder.cpp
+StatuteTreeNode.cpp
+StatuteStatusGraph.cpp
+StatuteStatusGraphArc.cpp
+StatuteStatusGraphNode.cpp
+StatuteStatusMachine.cpp
+Lexer.cpp
+LexStatusMachine.cpp
+LexStatusGraph.cpp
+StatusGraphArc.cpp
+StatusGraphNode.cpp
+d:\hiquotion\c++\foundationlib\datastructlib\pointerlist.h(27) : warning C4150: deletion of pointer to incomplete type 'CStatusGraphArc'; no destructor called
+        d:\hiquotion\c++\advancedlib\compilelib\lex\lexstatusgraph\statusgraphnode.h(14) : see declaration of 'CStatusGraphArc'
+        d:\hiquotion\c++\foundationlib\datastructlib\pointerlist.h(23) : while compiling class-template member function 'void __thiscall CPointerList<class CStatusGraphArc *>::destroyAll(void)'
+FormattedString.cpp
+StringExt.cpp
+ConcatRegularExpression.cpp
+DigitRegularExpression.cpp
+Generating Code...
+Compiling...
+EmptyRegularExpression.cpp
+KleenStarRegularExpression.cpp
+KleenStartPlusRegularExpression.cpp
+LowerRegularExpression.cpp
+NotRegularExpression.cpp
+OrRegularExpression.cpp
+RangeRegularExpression.cpp
+StringRegularExpression.cpp
+SymbolRegularExpression.cpp
+UpperRegularExpression.cpp
+KernelLexer.cpp
+KernelLexStatusGraphBuilder.cpp
+FileLog.cpp
+Log.cpp
+LogBuilder.cpp
+LogConfig.cpp
+LogDef.cpp
+LogLevel.cpp
+tinystr.cpp
+tinyxml.cpp
+Generating Code...
+Compiling...
+tinyxmlerror.cpp
+tinyxmlparser.cpp
+XmlOperation.cpp
+FileOperation.cpp
+FolderOperation.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\a\LOCALS~1\Temp\RSP118.tmp" with contents
+[
+/nologo /o"Debug/StatuteAnalyze.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\StatuteAnalyze.sbr"
+".\Debug\MemManager.sbr"
+".\Debug\StatuteAnalyzer.sbr"
+".\Debug\StatuteItemList.sbr"
+".\Debug\StatuteList.sbr"
+".\Debug\StatuteStatusGraphBuilder.sbr"
+".\Debug\StatuteTreeNode.sbr"
+".\Debug\StatuteStatusGraph.sbr"
+".\Debug\StatuteStatusGraphArc.sbr"
+".\Debug\StatuteStatusGraphNode.sbr"
+".\Debug\StatuteStatusMachine.sbr"
+".\Debug\Lexer.sbr"
+".\Debug\LexStatusMachine.sbr"
+".\Debug\LexStatusGraph.sbr"
+".\Debug\StatusGraphArc.sbr"
+".\Debug\StatusGraphNode.sbr"
+".\Debug\FormattedString.sbr"
+".\Debug\StringExt.sbr"
+".\Debug\ConcatRegularExpression.sbr"
+".\Debug\DigitRegularExpression.sbr"
+".\Debug\EmptyRegularExpression.sbr"
+".\Debug\KleenStarRegularExpression.sbr"
+".\Debug\KleenStartPlusRegularExpression.sbr"
+".\Debug\LowerRegularExpression.sbr"
+".\Debug\NotRegularExpression.sbr"
+".\Debug\OrRegularExpression.sbr"
+".\Debug\RangeRegularExpression.sbr"
+".\Debug\StringRegularExpression.sbr"
+".\Debug\SymbolRegularExpression.sbr"
+".\Debug\UpperRegularExpression.sbr"
+".\Debug\KernelLexer.sbr"
+".\Debug\KernelLexStatusGraphBuilder.sbr"
+".\Debug\FileLog.sbr"
+".\Debug\Log.sbr"
+".\Debug\LogBuilder.sbr"
+".\Debug\LogConfig.sbr"
+".\Debug\LogDef.sbr"
+".\Debug\LogLevel.sbr"
+".\Debug\tinystr.sbr"
+".\Debug\tinyxml.sbr"
+".\Debug\tinyxmlerror.sbr"
+".\Debug\tinyxmlparser.sbr"
+".\Debug\XmlOperation.sbr"
+".\Debug\FileOperation.sbr"
+".\Debug\FolderOperation.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\a\LOCALS~1\Temp\RSP118.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+StatuteAnalyze.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

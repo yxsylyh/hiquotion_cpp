@@ -1,0 +1,105 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: LogLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/LogLib.res" /d "_DEBUG" /d "_AFXDLL" "F:\工作\代码库\Hiq\LogLib\LogLib.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP156.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/LogLib.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\工作\代码库\Hiq\LogLib\FileLog.cpp"
+"F:\工作\代码库\Hiq\LogLib\ILog.cpp"
+"F:\工作\代码库\Hiq\INILib\IniOperation.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogBuilderBase.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogConfig.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogLevel.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogLib.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogLibLog.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogList.cpp"
+"F:\工作\代码库\Hiq\LogLib\ScreenLog.cpp"
+"F:\工作\代码库\Hiq\LogLib\LogBuilder.cpp"
+"F:\工作\代码库\Hiq\LogLib\Remark.cpp"
+"F:\工作\代码库\Hiq\FileSysLib\FileOperation.cpp"
+"F:\工作\代码库\Hiq\FileSysLib\FolderOperation.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP156.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP157.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/LogLib.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\工作\代码库\Hiq\LogLib\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP157.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP158.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/LogLib.pdb" /debug /machine:I386 /out:"Debug/LogLib.exe" /pdbtype:sept 
+".\Debug\FileLog.obj"
+".\Debug\ILog.obj"
+".\Debug\IniOperation.obj"
+".\Debug\LogBuilderBase.obj"
+".\Debug\LogConfig.obj"
+".\Debug\LogLevel.obj"
+".\Debug\LogLib.obj"
+".\Debug\LogLibLog.obj"
+".\Debug\LogList.obj"
+".\Debug\ScreenLog.obj"
+".\Debug\StdAfx.obj"
+".\Debug\LogBuilder.obj"
+".\Debug\Remark.obj"
+".\Debug\FileOperation.obj"
+".\Debug\FolderOperation.obj"
+".\Debug\LogLib.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP158.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+FileLog.cpp
+ILog.cpp
+IniOperation.cpp
+LogBuilderBase.cpp
+LogConfig.cpp
+LogLevel.cpp
+LogLib.cpp
+LogLibLog.cpp
+LogList.cpp
+ScreenLog.cpp
+LogBuilder.cpp
+Remark.cpp
+FileOperation.cpp
+FolderOperation.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15A.tmp" with contents
+[
+/nologo /o"Debug/LogLib.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\FileLog.sbr"
+".\Debug\ILog.sbr"
+".\Debug\IniOperation.sbr"
+".\Debug\LogBuilderBase.sbr"
+".\Debug\LogConfig.sbr"
+".\Debug\LogLevel.sbr"
+".\Debug\LogLib.sbr"
+".\Debug\LogLibLog.sbr"
+".\Debug\LogList.sbr"
+".\Debug\ScreenLog.sbr"
+".\Debug\LogBuilder.sbr"
+".\Debug\Remark.sbr"
+".\Debug\FileOperation.sbr"
+".\Debug\FolderOperation.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15A.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+LogLib.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

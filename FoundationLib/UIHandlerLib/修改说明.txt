@@ -1,0 +1,3 @@
+去掉了InteractiveLib
+把IInteractiveHandler接口放到UIHandlerLib中
+IUIHandler类还需要修改，把CInteractiveContainer中的方法变量等内容复制到IUIHandler类中，然后CInteractiveContainer就彻底不要了

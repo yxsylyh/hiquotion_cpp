@@ -1,0 +1,9 @@
+1、从文档类中获取视图对象指针：在文档类中有一个与其关联的各视图对象的列表，并可通过CDocument类的成员函数GetFirstViewPosition和GetNextView来定位相应的视图对象。
+
+2、从视图类中获取文档对象和主框架对象指针：函数CWnd::GetParentFrame可实现从视图类中获取主框架指针，原型：CFrameWnd* GetParentFrame( ) const;
+
+3、在主框架类中获取视图对象指针：CView* CFrameWnd::GetActiveView( ) const;
+
+4、在框架类中可直接调用CFrameWnd::GetActiveDocument函数获得当前活动的文档对象指针。
+
+5、在同一个应用程序的任何对象中，可通过全局函数AfxGetApp()来获得指向应用程序对象的指针。

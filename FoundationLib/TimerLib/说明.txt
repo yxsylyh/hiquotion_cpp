@@ -1,0 +1,8 @@
+Old2 的 CTimer类，仅支持 EventLib 中的事件机制
+
+Old 的 CTimer 类，支持 EventLib 事件机制，也支持自定义全局OnTimer函数指针来获取OnTimer事件
+
+最新的Timer库：
+
+CTimerBase，继承该类，可以在 OnTimer 虚函数中执行需要的操作
+CEventTimer，继承自 CTimerBase 类，提供 EventLib 的 Timer 事件，可供其他类处理

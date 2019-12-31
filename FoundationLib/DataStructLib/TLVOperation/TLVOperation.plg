@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TLVOperation - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP9CCB.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/TLVOperation.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ    /c 
+"E:\yuxs\±à³Ì\¹¤³Ì\vcp\TLVOperation\TlvMap.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP9CCB.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP9CCC.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/TLVOperation.pdb" /debug /machine:I386 /out:"Debug/TLVOperation.exe" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\TLVOperation.obj"
+".\Debug\TLVOperation.res"
+".\Debug\TLV.obj"
+".\Debug\TlvMap.obj"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP9CCC.tmp"
+<h3>Output Window</h3>
+Compiling...
+TlvMap.cpp
+c:\program files (x86)\microsoft visual studio\vc98\include\xstring(42) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::iterator,std::pair<short const ,CTLV *>,std::pair<short const ,CTLV *> &,std::pair<short const ,CTLV *> *,int>' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xstring(42) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::const_iterator,std::pair<short const ,CTLV *>,std::pair<short const ,CTLV *> const &,std::pair<short const ,CTLV *> const *,int>' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xstring(42) : warning C4786: 'std::pair<std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::iterator,std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::iterator>' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xstring(42) : warning C4786: 'std::pair<std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::const_iterator,std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(183) : warning C4786: 'std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::~_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(160) : warning C4786: 'std::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >::_Tree<short,std::pair<short const ,CTLV *>,std::map<short,CTLV *,std::less<short>,std::allocator<CTLV *> >::_Kfn,std::less<short>,std::allocator<CTLV *> >' : identifier was truncated to '255' characters in the debug information
+Linking...
+
+
+
+<h3>Results</h3>
+TLVOperation.exe - 0 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

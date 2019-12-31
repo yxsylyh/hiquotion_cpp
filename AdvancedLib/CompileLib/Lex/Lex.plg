@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Lex - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP86E7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/Lex.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\¹¤×÷\´úÂë¿â\Hiquotion\C++\AdvancedLib\CompileLib\Lex\Lexer\Lexer.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP86E7.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP86E8.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Lex.pdb" /debug /machine:I386 /out:"Debug/Lex.exe" /pdbtype:sept 
+".\Debug\Lex.obj"
+".\Debug\StdAfx.obj"
+".\Debug\LexStatusGraph.obj"
+".\Debug\StatusGraphArc.obj"
+".\Debug\StatusGraphNode.obj"
+".\Debug\LexStatusMachine.obj"
+".\Debug\Lex.res"
+".\Debug\Lexer.obj"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP86E8.tmp"
+<h3>Output Window</h3>
+Compiling...
+Lexer.cpp
+d:\program files (x86)\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,int>' : identifier was truncated to '255' characters in the debug information
+d:\program files (x86)\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,int>' : identifier was truncated to '255' characters in the debug information
+Linking...
+
+
+
+<h3>Results</h3>
+Lex.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

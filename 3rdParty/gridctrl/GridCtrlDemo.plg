@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GridCtrlDemo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP6F06.tmp" with contents
+[
+/nologo /MDd /W4 /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/GridCtrlDemo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Users\a\Desktop\gridctrl_demo_addCellButton\GridCtrl_src\GridCtrl.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP6F06.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP6F07.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/GridCtrlDemo.pdb" /debug /machine:I386 /out:"Debug/GridCtrlDemo.exe" /pdbtype:sept 
+.\Debug\GridCell.obj
+.\Debug\GridCellBase.obj
+.\Debug\GridCtrl.obj
+.\Debug\GridDropTarget.obj
+.\Debug\InPlaceEdit.obj
+.\Debug\TitleTip.obj
+.\Debug\GridCellButton.obj
+.\Debug\GridCellCheck.obj
+.\Debug\GridCellCombo.obj
+.\Debug\GridCellDateTime.obj
+.\Debug\GridCellNumeric.obj
+.\Debug\GridURLCell.obj
+.\Debug\GridCtrlDemo.obj
+.\Debug\GridCtrlDemoDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\GridCtrlDemo.res
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP6F07.tmp"
+<h3>Output Window</h3>
+Compiling...
+GridCtrl.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(249) : warning C4663: C++ language change: to explicitly specialize class template 'vector' use the following syntax:
+        template<> class vector<bool,class std::allocator<unsigned int> > ...
+C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(156) : warning C4018: '<' : signed/unsigned mismatch
+        C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(156) : while compiling class-template member function 'void __thiscall std::vector<unsigned int,class std::allocator<unsigned int> >::insert(unsigned int *,unsigned int,const unsigned int &)'
+C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(167) : warning C4018: '<' : signed/unsigned mismatch
+        C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(156) : while compiling class-template member function 'void __thiscall std::vector<unsigned int,class std::allocator<unsigned int> >::insert(unsigned int *,unsigned int,const unsigned int &)'
+C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(156) : warning C4018: '<' : signed/unsigned mismatch
+        C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(156) : while compiling class-template member function 'void __thiscall std::vector<int,class std::allocator<int> >::insert(int *,unsigned int,const int &)'
+C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(167) : warning C4018: '<' : signed/unsigned mismatch
+        C:\Program Files (x86)\Microsoft Visual Studio\VC98\INCLUDE\vector(156) : while compiling class-template member function 'void __thiscall std::vector<int,class std::allocator<int> >::insert(int *,unsigned int,const int &)'
+Linking...
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP7761.tmp" with contents
+[
+/nologo /o"Debug/GridCtrlDemo.bsc" 
+.\Debug\StdAfx.sbr
+.\Debug\GridCell.sbr
+.\Debug\GridCellBase.sbr
+.\Debug\GridCtrl.sbr
+.\Debug\GridDropTarget.sbr
+.\Debug\InPlaceEdit.sbr
+.\Debug\TitleTip.sbr
+.\Debug\GridCellButton.sbr
+.\Debug\GridCellCheck.sbr
+.\Debug\GridCellCombo.sbr
+.\Debug\GridCellDateTime.sbr
+.\Debug\GridCellNumeric.sbr
+.\Debug\GridURLCell.sbr
+.\Debug\GridCtrlDemo.sbr
+.\Debug\GridCtrlDemoDlg.sbr]
+Creating command line "bscmake.exe @C:\Users\a\AppData\Local\Temp\RSP7761.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+GridCtrlDemo.exe - 0 error(s), 5 warning(s)
+</pre>
+</body>
+</html>

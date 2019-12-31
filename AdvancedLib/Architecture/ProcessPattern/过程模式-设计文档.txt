@@ -1,0 +1,77 @@
+过程模式设计
+
+依据：过程模式-概念文档
+
+1、状态枚举（enumProcessStatus）
+
+PS_OK			正常（即可以继续下一过程）
+PS_OK_WITH_ERROR	有异常但不影响继续下一过程
+PS_ERROR_ADVISE_RETRY	有错误建议重试（可以没有重试次数限制，或者重试次数可以自定或外部给定，超过次数限制，则需要返回有错误程序必须终止）
+PS_ERROR_TERMINATE_APP	有错误程序必须终止
+PS_WAITING_EVENT	等待异步事件
+
+
+2、参数和返回值接口（IParameter）
+
+不同过程的参数可以继承该接口。
+
+3、过程事件的参数（CProcessEvent）
+
+继承的接口：
+IEvent
+
+属性：
+enumProcessStatus m_status;	当前状态
+int m_resultCode;		结果码
+CString m_errorMessage;		消息
+
+4、过程接口（IProcess）
+
+继承的接口：
+public INodeData, public IEventRaisable
+
+宏定义：
+#define SOURCE_FILE __file__		代码所在文件
+#define SOURCE_CURRENT_LINE __line__	代码当前行数
+
+属性：
+enumProcessStatus m_status;		状态枚举
+int m_resultCode;			结果码
+CString m_errorMessage;			错误信息
+ILog	*m_log;				日志接口（默认为NULL）
+
+方法：
+IParameter *execute(IParameter *para);		执行
+virtual CString getSrcFile();		获取代码所在文件
+virtual int getSrcLine();		获取代码所在行数
+注：每个继承IProcess的类，都需要自行实现上面两个虚函数，才能获取到正确的代码文件和行数。可以按下面的代码实现：
+CString getSrcFile(){ return SOURCE_FILE; }
+int getSrcLine(){ return SOURCE_CURRENT_LINE; }
+
+事件：
+CDelegate ProcessEvent;			异步执行完毕抛出的事件
+CDelegate UpdateUI;			更新界面信息的事件（不会终止过程的执行）
+
+
+5、过程节点接口（IProcessNode）
+
+继承的接口：
+public CNode
+
+属性：
+
+
+方法：
+
+
+事件：
+
+
+6、参数
+
+在程序中提供一个全局的参数哈希表，即map，每个执行了的过程，都将自己执行后的结果参数列表添加到该map中。
+
+默认情况下，系统应该先将全局公用的参数以"global"为key，添加到该map中。
+
+结果参数列表实际上也是一个map，可以方便的根据参数名称取出其值。
+

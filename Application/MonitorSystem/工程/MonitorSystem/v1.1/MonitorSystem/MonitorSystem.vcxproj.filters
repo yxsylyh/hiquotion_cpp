@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="MonitorLib">
+      <UniqueIdentifier>{6cc7886d-bc87-4943-8328-930060d52686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonitorLib\Interface">
+      <UniqueIdentifier>{6656bb2d-7379-4a25-801e-1f36b8455d36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileMonitor">
+      <UniqueIdentifier>{a120be17-7a1b-4976-897f-0ae7bdc26aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PugiXmlLib">
+      <UniqueIdentifier>{a768b4aa-7928-40e4-9aeb-2f5d72b34d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileSysLib">
+      <UniqueIdentifier>{4ed75c8e-1ca4-47eb-aff2-495ad394068a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileLogLib">
+      <UniqueIdentifier>{d4f272e2-d224-4daa-8ff4-ad4bd968bb5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTTPRequestMonitor">
+      <UniqueIdentifier>{d28a00fd-182d-4282-93c1-aa456a1736f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpRequest">
+      <UniqueIdentifier>{98fe101b-6548-46e1-bf31-cc3b35a5a22e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MonitorSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorSystemDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\MonitedObjectCreator.cpp">
+      <Filter>MonitorLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\Monitor.cpp">
+      <Filter>MonitorLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\MonitorBuilder.cpp">
+      <Filter>MonitorLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\MonitorManager.cpp">
+      <Filter>MonitorLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\Interface\IAlertor.cpp">
+      <Filter>MonitorLib\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\Interface\IMonitedObject.cpp">
+      <Filter>MonitorLib\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="FileMonitor\MonitedFileSize.cpp">
+      <Filter>FileMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\Interface\ITarget.cpp">
+      <Filter>MonitorLib\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\3rdParty\PugiXmlLib\pugixml.cpp">
+      <Filter>PugiXmlLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\FileLog.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\Log.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogBuilder.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogConfig.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogDef.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogLevel.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\tinystr.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\tinyxml.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\tinyxmlerror.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\tinyxmlparser.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\XmlOperation.cpp">
+      <Filter>FileLogLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileSysLib\FileOperation.cpp">
+      <Filter>FileSysLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\FileSysLib\FolderOperation.cpp">
+      <Filter>FileSysLib</Filter>
+    </ClCompile>
+    <ClCompile Include="FileMonitor\FileSizeTarget.cpp">
+      <Filter>FileMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorLib\CommandAlertor.cpp">
+      <Filter>MonitorLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\HTTPRequest\HttpRequest.cpp">
+      <Filter>HttpRequest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\FoudationLib\HTTPRequest\UrlParser.cpp">
+      <Filter>HttpRequest</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTPRequestMonitor\MonitedHttpRequest.cpp">
+      <Filter>HTTPRequestMonitor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MonitorSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorSystemDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\MonitedObjectCreator.h">
+      <Filter>MonitorLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\Monitor.h">
+      <Filter>MonitorLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\MonitorBuilder.h">
+      <Filter>MonitorLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\MonitorManager.h">
+      <Filter>MonitorLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\Interface\IAlertor.h">
+      <Filter>MonitorLib\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\Interface\IMonitedObject.h">
+      <Filter>MonitorLib\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="FileMonitor\MonitedFileSize.h">
+      <Filter>FileMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\Interface\ITarget.h">
+      <Filter>MonitorLib\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\FileLog.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\Log.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogBuilder.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogConfig.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogDef.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\LogLevel.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\tinystr.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\tinyxml.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileLogLib\FileLogLib\XmlOperation.h">
+      <Filter>FileLogLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileSysLib\FileOperation.h">
+      <Filter>FileSysLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\FileSysLib\FolderOperation.h">
+      <Filter>FileSysLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\3rdParty\PugiXmlLib\pugiconfig.hpp">
+      <Filter>PugiXmlLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\3rdParty\PugiXmlLib\pugixml.hpp">
+      <Filter>PugiXmlLib</Filter>
+    </ClInclude>
+    <ClInclude Include="FileMonitor\FileSizeTarget.h">
+      <Filter>FileMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorLib\CommandAlertor.h">
+      <Filter>MonitorLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\HTTPRequest\HttpRequest.h">
+      <Filter>HttpRequest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\FoudationLib\HTTPRequest\UrlParser.h">
+      <Filter>HttpRequest</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTPRequestMonitor\MonitedHTTPRequest.h">
+      <Filter>HTTPRequestMonitor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MonitorSystem.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MonitorSystem.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MonitorSystem.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

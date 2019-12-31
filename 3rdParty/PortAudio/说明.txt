@@ -1,0 +1,16 @@
+PortAudio 19
+
+当前版本是 v190600_20161030（19.6.0吧估计）
+
+安装DX9.0c sdk
+在vc工程中设置DX的包含目录和库目录
+使用asio sdk，按照说明将asio sdk指定目录复制到PA的指定目录下
+将debug版本的文件名后面加“d”以便于与release版本的相区分
+编译，通过
+
+目前使用的release min dependency版本的是最小依赖的版本，经过查看，最小依赖版本加入了vc9依赖库，以便于dll不依赖于vc9运行时，但dll比release版本大将近70KB。
+
+
+另外，PortAudio有C++的版本，可以编译出可用于 VC6、VC7.1（实际是用VC9编译的） 的静态库，portaudiocpp-vc6.lib、portaudiocpp-vc6-d.lib和portaudiocpp-vc7_1.lib、portaudiocpp-vc7_1d.lib，分别用于 release 和 debug 模式。lib文件以及需要包含的头文件，在static目录中，项目里只需要引用 PortAudioCpp.hxx 就好。其中的类可以直接拿过来使用，不用自己再包装c代码了，很好。
+
+由于 C++ 版本的代码引用了 c 代码，所以c代码的dll和lib文件是必须使用的了。

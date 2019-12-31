@@ -1,0 +1,91 @@
+独立变量、结构体中的变量、结构体中的结构体
+<?xml version="1.0"?>
+<xmlopr gentype="struct" name="config">
+<!-- type指定生成结构体还是类 struct表示结构体 class表示类 -->
+  <node gentype="valuable" name="pusher" location="/vmc/server/pusher">
+  <!-- gentype表示生成类型
+         valuable表示每个property（属性）都生成变量，pusher_ip和pusher_port。
+         struct表示生成结构体，ip和port为pusher结构体中的变量
+   -->
+    <property name="ip" type="string" />
+    <property name="port" type="int" />
+  </node>
+  <node gentype="struct" name="area" location="/vmc/MonitorInfo/area">
+    <property name="name" type="string" />
+    <node gentype="struct" name="endpoint" location="endpoint" location="/vmc/MonitorInfo/area[@name=%parent.name%]/endpoint">
+    <!-- %parent.name% 表示parent节点中的名称为"name"的属性值 -->
+    <!-- 也可以是%this.name%或简写为%name% 表示当前节点中的名称为"name"的属性值 -->
+    <!-- 有空测试一下代码中，不从根查找，从当前area节点向下做xpath查找是否可以，如果可以，则直接写 location="endpoint" 就可以了吧。
+           网上查询，似乎可以这样写，就是直接写 location="endpoint" 前面不带/或//，就是从当前节点向下选择其所有endpoint子节点，这样就省事多了
+     -->
+      <property name="type" type="string" />
+      <property name="name" type="string" />
+      <property name="ip" type="string" />
+      <property name="port" type="int" />
+    </node>
+  </node>
+</xmlopr>
+
+
+
+
+<?xml version="1.0"?>
+<config>
+  <student name="张三" age="16" sex="男" />
+  <student name="李四" age="18" sex="男" />
+  <student name="王五" age="17" sex="女" />
+</config>
+
+<?xml version="1.0"?>
+<root name="config" path="">
+  <node name="student">
+    <property name="name" type="string" />
+    <property name="age" type="int" />
+    <property name="sex" type="string />
+  </node>
+</root>
+
+
+<?xml version="1.0"?>
+<config>
+  <student name="张三" age="16" sex="男">
+    <score>
+  </student>
+  <student name="李四" age="18" sex="男">
+  </student>
+  <student name="王五" age="17" sex="女">
+  </student>
+</config>
+
+<?xml version="1.0"?>
+<root name="config" path="">
+  <node name="student" subnode="true">
+    <properties>
+      <property name="name" type="string" />
+      <property name="age" type="int" />
+      <property name="sex" type="string />
+    </properties>
+    <subnode name="score">
+      <property name="math
+    </subnode>
+  </node>
+</root>
+
+
+<?xml version="1.0"?>
+<structure>
+  <element name="score" type="struct">
+    <item name="math" type="float" />
+    <item name="culture" type="float" />
+    <item name="chemics" type="float" />
+    <item name="english" type="float" />
+    <item name="physics" type="float" />
+  </element>
+  <element name="student" type="struct">
+  <!-- element name="student" type="class" -->
+    <item name="name" type="std::string" />
+    <item name="sex" type="std::string" />
+    <item name="age" type="int" />
+    <item name="scores" type="score">
+  </element>
+</structure>

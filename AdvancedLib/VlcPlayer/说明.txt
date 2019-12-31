@@ -1,0 +1,23 @@
+Vlc 播放器库
+
+可以将vlc播放器嵌入到vc工程中，支持本地多媒体文件，也支持网络媒体文件；支持双击全屏。具体支持的视音频文件格式及网络媒体协议，请自行在网上搜索vlc player。
+
+使用方法：
+vc include目录添加3rdParty\vlc\include
+vc lib目录添加3rdParty\vlc\lib
+
+定义CVlcDisplayWnd类变量，初始化成你的界面的子窗口，调用其playLocal或playUrl来播放本地多媒体文件或网络媒体文件。
+
+全屏模式下，如果希望按ESC键退出全屏，需要自行处理ESC按键消息，在其消息处理程序中调用播放器变量的SetNormalScreen()方法。
+
+编译通过后，需要在exe程序所在目录中放入plugins目录和如下四个dll：
+axvlc.dll
+libvlc.dll
+libvlccore.dll
+npvlc.dll
+
+注：在 ActiveX 中使用该 vlc 库的时候，“无窗口激活”不能选，否则视频窗口无法显示出来（折腾大半天才发现是这个问题）。
+
+将 CVlcDisplayWnd 创建时的 Child 改成 Popup，则在播放视频的时候，可以收到窗口事件了。
+
+新增 CVlcDisplayWndEx 类，继承 CVlcDisplayWnd 类，为了是给外界发送单击事件，单击事件中会把视频播放地址作为参数返回。将使用 PostMessage 来实现事件传递给主线程，因为在用该库制作控件的时候，这样才能抛出外部事件，如果使用 EventLib 抛出事件，外部无法收到事件。

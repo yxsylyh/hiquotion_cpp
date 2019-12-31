@@ -1,0 +1,47 @@
+有向图类CDiGraph<NodeData, ArcWeight>
+
+属性：
+节点list
+边list
+
+方法：
+获取和设置节点list
+添加（删除、修改）节点list中的指定节点
+获取指定节点
+获取和设置边list
+添加（删除、修改）边list中的指定边
+获取指定边
+
+
+有向图不再使用十字链表，感觉外部操作不太方便
+
+节点类CNode<NodeData, ArcWeight>
+
+属性
+NodeData
+出边列表
+入边列表
+
+
+边类CArc<NodeData, ArcWeight>
+
+属性
+ArcWeight
+起始节点
+终止节点
+
+
+状态图类CStatusGraph<NodeData, ArcWeight>，继承自图类CDiGraph<NodeData, ArcWeight>
+
+属性：
+起始状态节点
+终止节点列表
+
+方法：
+获取和设置起始节点
+获取终止节点列表
+获取终止节点个数
+获取指定索引的终止节点
+其他状态节点列表（父类的属性）
+
+

@@ -1,0 +1,29 @@
+语法：
+
+Z=>S
+S=>E+T
+E=>Tb
+T=>Ea
+E=>a
+
+语言：
+
+aab+aa
+
+规约后的语法树：
+
+Statute tree node struct is shown below:
+
+-[NoToken]
+|----S
+    |----E
+        |----T
+            |----E
+                |----a
+            |----a
+        |----b
+    |----+
+    |----T
+        |----E
+            |----a
+        |----a

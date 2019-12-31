@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<MonitorSystem version="1.0">
+  <!-- 每 10 分钟轮询一次 -->
+  <!-- 条件满足 1 次则报警 -->
+  <Monitor interval="10" times="1">
+    <!-- 监控文件的大小 -->
+    <MonitedObject type="File" status="Size">
+      <!-- 文件所在路径 -->
+      <Path>D:\cjb\DataUp\Logs\log%year%%month%%day%.log"</Path>
+      <!-- 所满足的条件是文件大小不改变 -->
+      <Condition>NotChanged</Condition>
+    </MonitedObject>
+    <Alertor>
+      <Commands>
+        <Command>taskill DataUp.exe</Command>
+      </Commands>
+    </Alertor>
+  </Monitor>
+  <Monitor interval="90" times="3">
+  </Monitor>
+</MonitorSystem>

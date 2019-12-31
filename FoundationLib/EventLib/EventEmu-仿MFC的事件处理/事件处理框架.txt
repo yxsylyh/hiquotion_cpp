@@ -1,0 +1,9 @@
+﻿事件处理框架
+
+抛出事件类，继承IDelegate接口，该接口有一个raiseEvent方法，返回整型值。该方法有一个IEvent参数，是一个接口，有getEventId方法，返回事件的id，其类型是一个不区分大小写的字符串；还有一个getSource方法，返回IEventRaisable接口，代表事件抛出源。
+
+IEventRaisable接口是事件源，其派生类中可以定义多个CDelegate对象用于抛出多个事件。 其实IEventRaisable接口内部什么也没做，所以目前来看，任何类都可以定义CDelegate对象，并且抛出事件。
+
+IEventHandler接口是事件处理接口，包含handleEvent方法，该方法有一个IEvent参数，该方法返回整型值。
+
+在IEventHandler派生的类中，需要处理消息映射。即使用Declare_Event_Map()以及Beggin_Event_Map()和End_Event_Map()宏。但是这样定义是静态的。如果需要动态处理事件，需要IEventHandler派生类自行实现具有virtual属性的handleEvent方法。

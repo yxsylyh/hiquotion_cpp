@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Log>
+    <!-- 是否在每条日志前显示时间 -->
+    <showTime>true</showTime>
+    <!-- 日志输出级别 -->
+    <level>LOGLEVEL_SHOWWARNING</level>
+    <!-- 日志文件名，留空默认为mylog（不带扩展名，扩展名为.log） -->
+    <fileName>mylog</fileName>
+    <!-- 日志文件名是否加日期后缀 -->
+    <fileNameWithDate>true</fileNameWithDate>
+    <!-- 指定子文件夹名，若为空则在同目录内创建文件日志 -->
+    <subFolderName>Logs</subFolderName>
+    <!-- 是否覆写（false表示追加内容） -->
+    <overwrite>false</overwrite>
+</Log>

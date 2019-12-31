@@ -1,0 +1,28 @@
+// ITask.cpp: implementation of the ITask class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "TaskThread.h"
+#include "ITask.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+ITask::ITask()
+: m_errMsg("")
+{
+
+}
+
+ITask::~ITask()
+{
+
+}

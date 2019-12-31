@@ -1,0 +1,5 @@
+已知问题：
+
+该线程类是基于 MFC 的 CreateThread 的。
+
+已知该线程在操作社保卡读卡器 COM（该COM空间是dll文件，是由vb6编写的）的时候，在OpenReader成功之后的CheckCard函数，会导致 msvbvm60.dll 崩溃。不知道是这样创建的线程与com有冲突，还是读社保卡的这个com dll本身有问题。

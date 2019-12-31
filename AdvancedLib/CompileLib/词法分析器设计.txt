@@ -1,0 +1,83 @@
+词法分析器设计
+
+0、算法
+
+参看 Compiler.eap 中的 Lexer。
+
+
+1、简化设计（暂时不需要了）
+
+假设已有有穷自带机生成的图，并且该图已经实现。需要实现，图节点可以判断出自身是否是终态，即isEndStatus()函数。
+
+然后可以做词法分析了。
+
+词法分析函数：
+
+参数：有穷自带机的有向图、可以取得或遍历字符的接口类
+CDiGraph *graph, IStringReader *reader
+用于返回的输入参数：单词符号列表
+vector<Signal> *signalList
+
+Signal 结构体
+struct Signal
+{
+  std::string signal;
+  std::string type;
+}
+
+type取值为：
+不合法字符
+数字
+字母
+其他  代表符号自身
+
+
+函数流程：
+
+std::string strRead="";  // 每次读取的字符缓存到该变量中
+
+signalList.clear();  // 清空输出列表
+
+CNode *currNode=graph->getStart(); //graph获取start节点
+if(!currNode)
+  // 处理出错情况
+
+if(reader->isError())
+  // 处理字符串读取器出错的情况
+
+reader->readChar();   // 读取一个字符
+if(reader->isError())
+  // 处理字符串读取器出错的情况
+
+while(!reader->isEndSymbol())
+{
+  if(reader->isError())
+    // 处理字符串读取器出错的情况，并返回
+
+  char ch=reader->getCurrentChar();  // 获取当前字符
+  vector<CArc> *arc=currNode->getArcByWeight(ch);  // 获取当前节点对应当前字符的弧
+  if(!arc)
+    // 处理出错，并且break
+
+  currNode=arc->getEndNode();  // 跳转当前节点到该弧对应的终止节点
+  if(!currNode)
+    // 处理出错，并且break
+
+  strRead+=ch;
+  if(currNode->isEndStatus())  // 如果新的当前节点是终态
+  {
+    sinalList->add(strRead, getType(strRead)); // 添加字符缓存中的字符串和其类型到符号列表中
+    strRead="";  // 并且置字符缓存为空
+  }
+
+  reader->readChar();   // 再次读取一个字符
+  if(reader->isError())
+    // 处理字符串读取器出错的情况
+
+}
+
+if(strRead!="") // 全部字符处理完毕，如果字符缓存不空
+  {
+    sinalList->add(strRead, getType(strRead)); // 添加字符缓存中的字符串和其类型到符号列表中
+    strRead="";  // 并且置字符缓存为空
+  }

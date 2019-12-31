@@ -1,0 +1,27 @@
+编译器类库CompilerLib
+
+字符集，CCharset，表示语言中包含的所有字符。构造函数是一个字符串。其包含acceptChar方法，判断给定的字符是否属于该字符集。
+private:
+	string m_charset;
+
+
+不确定有穷自动机（NFA）类CNFA，继承自状态图类CStatusGraph<int, IRegularExpression *>
+
+
+确定有穷自动机（DFA）类CDFA，继承自状态图类CStatusGraph<vector<int> *, IRegularExpression *>（实际第二个模板是一系列正则表达式的连接）
+
+
+正则表达式到NFA的转换
+
+转换器类CRE2StatusGraphConverter
+
+方法：convert
+多态：空RE、字符RE、字符串RE、字符范围RE、连接RE、或RE、克林闭包RE，到状态图的转换（7个多态函数）
+
+
+NFA到DFA的转换类，CNFAToDFAConverter。
+
+方法：convert
+参数：CNFA*, CDFA*
+
+

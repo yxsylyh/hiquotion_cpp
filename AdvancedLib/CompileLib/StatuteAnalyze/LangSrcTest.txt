@@ -1,0 +1,17 @@
+int a=34;
+int b=40;
+int cd=a+b;
+if(b-a==1)
+   a=1;
+if(cd-b==a)
+   cd=cd-(b-a);
+else
+   a=cd-b;
+while(a==3)
+  a=a+1;
+do
+{
+  a=a+b;
+  b=b-a;
+}
+while(a==4)

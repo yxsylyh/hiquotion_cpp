@@ -1,0 +1,9 @@
+用 xml 表示 CodeDom，就像下面的 xml 那样。
+
+<code version="1.0">
+  <head>
+    <!-- 不是默认文件夹的话，indefaultdir参数可以省略  -->
+    <item type="include" indefaultdir="true">string.h</item>
+    <item type="import">rt.jar</item>
+
+</code>

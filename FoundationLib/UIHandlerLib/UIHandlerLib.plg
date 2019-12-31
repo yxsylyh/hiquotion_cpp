@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: UIHandlerLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/UIHandlerLib.res" /d "_DEBUG" /d "_AFXDLL" "E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\UIHandlerLib\UIHandlerLib.rc"" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP1F7D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/UIHandlerLib.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\UIHandlerLib\TestDlg.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\UIHandlerLib\UIHandlerLib.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\UIHandlerLib\IInteractiveEventHandler.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\UIHandlerLib\IUIHandler.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\Container.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\Elipse.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\IDrawing.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\IShape.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\Rectangle.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\RoundRectangle.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DrawingLib\ILocation.cpp"
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\DataStructLib\TreeProj\TreeNode.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP1F7D.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP1F7E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/UIHandlerLib.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\yuxs\工作\代码库\Hiquotion\C++\FoudationLib\UIHandlerLib\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP1F7E.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP1F8E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/UIHandlerLib.pdb" /debug /machine:I386 /out:"Debug/UIHandlerLib.exe" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\TestDlg.obj"
+".\Debug\UIHandlerLib.obj"
+".\Debug\IInteractiveEventHandler.obj"
+".\Debug\IUIHandler.obj"
+".\Debug\Container.obj"
+".\Debug\Elipse.obj"
+".\Debug\IDrawing.obj"
+".\Debug\IShape.obj"
+".\Debug\Rectangle.obj"
+".\Debug\RoundRectangle.obj"
+".\Debug\ILocation.obj"
+".\Debug\TreeNode.obj"
+".\Debug\UIHandlerLib.res"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP1F8E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+TestDlg.cpp
+UIHandlerLib.cpp
+IInteractiveEventHandler.cpp
+IUIHandler.cpp
+Container.cpp
+Elipse.cpp
+IDrawing.cpp
+IShape.cpp
+Rectangle.cpp
+RoundRectangle.cpp
+ILocation.cpp
+TreeNode.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP2817.tmp" with contents
+[
+/nologo /o"Debug/UIHandlerLib.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\TestDlg.sbr"
+".\Debug\UIHandlerLib.sbr"
+".\Debug\IInteractiveEventHandler.sbr"
+".\Debug\IUIHandler.sbr"
+".\Debug\Container.sbr"
+".\Debug\Elipse.sbr"
+".\Debug\IDrawing.sbr"
+".\Debug\IShape.sbr"
+".\Debug\Rectangle.sbr"
+".\Debug\RoundRectangle.sbr"
+".\Debug\ILocation.sbr"
+".\Debug\TreeNode.sbr"]
+Creating command line "bscmake.exe @C:\Users\a\AppData\Local\Temp\RSP2817.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+UIHandlerLib.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

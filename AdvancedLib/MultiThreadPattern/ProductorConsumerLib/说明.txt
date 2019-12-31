@@ -1,0 +1,11 @@
+生产者消费者模式类 CProductorConsumerPattern
+
+这里只提供生产者消费者模式类 CProductorConsumerPattern。提供一个 T 类型的列表对象 m_products 用来表示仓库存储。CProductorConsumerPattern 类提供生产（produce）和消费（consume）两个函数，在这两个函数内部实现了同步等机制。
+
+对于需要使用生产者消费者模式的类，无论是线程中实现生产消费，还是在while函数中实现，都需要在该lib外部去实现。
+
+需要使用生产消费模式的类在这里列出（不限于这些类）：
+
+异步消息机制
+消息队列（消息中心）
+音频播放

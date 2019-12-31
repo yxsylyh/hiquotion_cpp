@@ -1,0 +1,16 @@
+用户界面处理库
+UIHandleLib
+
+可以添加子界面，也可以添加CContainer图形对象。子界面具有事件处理能力，而CContainer图形对象则没有
+
+类框架已经建好，可以测试一下看看效果，IUIHandler的构造函数还有点欠缺
+
+public IUIHandler : public IInteractiveEventHandler
+
+属性
+
+IShape *m_shape;
+
+方法
+
+BOOL isPointIn();

@@ -1,0 +1,24 @@
+任务调度
+Task Dispatch
+
+有一个等待执行的任务列表m_taskList，有一个正在执行的任务列表m_exeList，还有一个执行完毕的任务列表m_doneList。
+
+已知最大执行的任务数m_maxRunningCount。
+
+第一次执行时，取m_maxRunningCount与m_taskList中任务数的最小值count，将count个任务从m_taskList中移动到m_exeList中，建立任务执行完的事件处理，开始执行任务。
+
+当改变m_maxRunningCount的值时，也需要相应改变m_exeList中的任务个数。
+
+当m_exeList中的任务执行完毕时，将该任务从m_exeList中移动到m_doneList列表中，并且从m_taskList中取出1个任务，添加到m_runningList列表中，并且开始执行该任务
+
+如果m_exeList中没有任务，则抛出任务完成事件。
+
+
+任务
+ITask类
+
+有开始start()、暂停pause()和停止stop()方法
+有任务完成事件TaskComplete
+
+CTaskDispatch类
+

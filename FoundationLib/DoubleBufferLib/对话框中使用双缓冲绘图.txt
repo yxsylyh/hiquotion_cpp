@@ -1,0 +1,31 @@
+对话框中使用双缓冲绘图
+
+（1、经过实践，designer没有绘制的地方是黑色的，怎么弄都不行，所以只能把designer的rect设置成客户端大小
+
+2、将把实现双缓冲区的代码放到一个对话框类中，然后添加对话框的时候，只需要继承之即可。不过这样做了以后，显示的是父对话框类，不画图，子对话框类画图无效，如果实现双缓冲区的对话框类使用子类的ID，子类对话框能显示出来，但不调用父类的OnPaint事件，从而无法激活OnDoubleBufferedDraw函数，导致想要绘制的内容无法绘制上去，郁闷~~~不得不手动添加代码了）
+
+最近做项目遇到了，绘制动态曲线时出现闪烁的问题。
+
+碰到的大多例子都是单文档或多文档绘图例子，而我使用的是对话框，挺受挫折的：），不过最终还是解决了。
+
+
+
+在对话框下，最主要的是找不到ON_WM_ERASEBKGND()消息的映射。所以这个需要手动加入。
+
+在.h文件中加入：afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+
+在.cpp文件消息映射中加入：    ON_WM_ERASEBKGND()
+
+再添上函数：
+
+BOOL C***Dlg::OnEraseBkgnd(CDC* pDC)
+{
+     return TRUE; 
+}
+
+剩下的绘图工作放在OnPaint()中，发现使用CMemDc类更简单，只需要在“CPaintDC dc(this);”一句后面使用CMemDC类来绘图就可以了
+
+CPaintDC dc(this); // device context for painting
+
+CMemDC memDc(&dc);
+m_designer.draw(&memDc);

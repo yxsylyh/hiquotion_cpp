@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Figure - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSPBC3.tmp" with contents
+[
+/nologo /o"Debug/Figure.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\Figure.sbr"
+".\Debug\MainDlg.sbr"
+".\Debug\Chord.sbr"
+".\Debug\Elipse.sbr"
+".\Debug\Label.sbr"
+".\Debug\Picture.sbr"
+".\Debug\Pie.sbr"
+".\Debug\Polygon.sbr"
+".\Debug\Rectangle.sbr"
+".\Debug\RoundRectangle.sbr"
+".\Debug\Arc.sbr"
+".\Debug\Bezier.sbr"
+".\Debug\ILine.sbr"
+".\Debug\Line.sbr"
+".\Debug\Polyline.sbr"
+".\Debug\Container.sbr"
+".\Debug\IDrawing.sbr"
+".\Debug\ILocation.sbr"
+".\Debug\IShape.sbr"
+".\Debug\TreeNode.sbr"]
+Creating command line "bscmake.exe @C:\Users\a\AppData\Local\Temp\RSPBC3.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Figure.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

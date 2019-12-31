@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GB2312"?>
+<saic>
+    <softInfo root="app">
+        <software id="winrar" name="winrar" version="4.2" folder="压缩">
+            <description>压缩工具</description>
+            <commands>
+                <command wait="true">
+                    <para needPath="true">winrar.exe</para>
+                    <para>/s</para>
+                </command>
+            </commands>
+        </software>
+        <software id="7z" name="7z" version="3.x" folder="压缩">
+            <description>7z压缩</description>
+            <commands>
+                <command wait="true">
+                    <para>"%systemdrive%\\program files\\winrar\\winrar.exe"</para>
+                    <para>-x</para>
+                    <para needPath="true">7z.rar</para>
+                    <para>"%systemdrive%\\program files\\"</para>
+                </command>
+                <command wait="true">
+                    <para>"%systemdrive%\\program files\\7z\\run.bat"</para>
+                </command>
+            </commands>
+        </software>
+        <software id="haoya" name="好压" version="4.1" folder="压缩">
+            <description>好压软件</description>
+            <commands>
+                <command wait="true">
+                    <para>copy</para>
+                    <para needPath="true">haoya</para>
+                    <para>"%systemdrive%\\program files\\"</para>
+                </command>
+                <command wait="true">
+                    <para>"%systemdrive%\\program files\\haoya\\run.bat"</para>
+                </command>
+            </commands>
+        </software>
+    </softInfo>
+    <catlogInfo>
+        <catlog name="压缩">
+            <software id="winrar" />
+            <software id="7z" />
+            <software id="haoya" />
+        </catlog>
+    </catlogInfo>
+    <packageInfo>
+        <package name="套餐1">
+            <software id="winrar" />
+            <software id="7z" />
+            <software id="haoya" />
+        </package>
+    </packageInfo>
+</saic>

@@ -1,0 +1,227 @@
+VC++ ADO recordset
+
+第一部分：记录集
+
+记录集是从数据库中按一定查询条件读入到内存中的一批记录，以供快速的操作。
+
+记录集recordset对象的属性，方法：
+
+BOF:当记录集记录指针指到起始记录（第1条记录）再向前移（即超过第1条记录），这时返回true.常用来对付一些出错情况。注：在BOF或EOF时使用update方法会出错。
+
+EOF:当记录指针指到最后一条记录之后（即超过了最后1条记录）时，该属性返回true.注：当一个记录集为空时，其BOF和EOF属性都为True，可据此检测一个记录集是否为空。
+
+AbsolutePosition:返回当前记录指针，即当前记录是第几条记录，只读。
+
+BookMark: 设置/返回当前记录指针的书签，为字符串。如：
+
+在当前记录处设置书签：lxn=Adodc1.Recordset.BookMark
+
+当指针移动后回到指定书签位置：Adodc1.Recordset.BookMark=lxn.
+
+返回记录集中记录的总数：RecordCount属性。该属性对于表形式的记录集将返回精确数目，但对于仅向前型记录集(adOpenForwardOnly)，返回-1。动态记录集(adOpenDynamic)则不一定，可能返回-1，与记录集的CursorLocation有关；而对于静态记录集(adOpenStatic)，也总能返回精确数目。附：在DAO中，对动态集和快照集需要先用MoveFirst和Movelast方法，再用RecordCount取得记录精确数目。
+
+Move方法：移动记录集指针。该方法有两个参数，第一个参数指定要向前或向后移动多少条记录，第二个参数指定一个相对书签位置，表明从当前记录还是从第1条或最后1条记录开始算，缺省为0从当前记录开始移，将指针从当前位置向前（负数）或向后（正数）移动指定条记录（第二个‘按书签移动’参数设为0-adBookMarkCurrent从当前记录开始，缺省）或将指针从第1条记录算起移动指定条记录（第二个参数设为1-adBookMarkFirst从首记录）。或将指针从最后1条记录算起移动指定条记录（第二个参数设为adBookMarkLast），如：Adodc1.Recordset.Move -12，将指针从当前位置向前移动12条记录，再如Adodc1.Recordset.Move 6 , 1表示指针从首记录开始后移6条记录，即使指针移到第7条记录。Move方法有几个引申的方法，如下：
+
+movefirst,记录集指针移到第1条记录；
+
+movelast,记录集指针移到最后1条记录；
+
+moveprevious,记录集指针移到上一条记录；
+
+movenext,记录集指针移到下一条记录。
+
+Find方法：查找满足条件的记录。
+
+find方法简略格式为：
+
+adodc对象.recordset.find 查找表达式（为“字段 比较符号 值”）
+
+其他参数采用缺省，find工作方式是：从当前记录指针位置开始（含当前记录）向后逐条检索记录，遇到满足条件的1条记录就停下来，指针指到此记录。
+
+因此，若要实现“继续寻找下1个”的功能，只要将记录指针移到下1条记录（用movenext一下），再照原样使用find即可。而重新查找必须先用movefirst将指针指到开头。
+
+Adodc1.Recordset.find "姓名 = '李长春'"
+
+其中查找表达式的样子为“字段比较符号值”，比较符号不仅可以是等号，还可以是>,<,<=,>=,<>,like等。其中Like和 = 很相近，只不过like专用于字符串比较，不区分字母的大小写可用通配符，而 = 号会区分字母大小写不能用通配符。
+
+一般情况下，查找表达式常采用变量表示，由用户来确定，如下：
+
+Dim lxn As String
+
+Static a As String
+
+a = InputBox("请输入查找姓名","查找")
+
+lxn = "NAME like '" & a & "'"
+
+.Find lxn
+
+LockType属性：设置记录集中的记录锁定方式，是否可修改及修改方式：有1-adLockReadOnly(只读)；2-adLockPessimistic(保守式修改)，当修改记录后立即将更改保存到数据源，3-adLockOptimistic(开放式修改)，当修改记录后只有调用Update方法才将更改保存到数据源；4-adLockBatchOptimistic(开放式批处理修改)。当修改记录后只有调用UpdateBatch方法才将更改保存到数据源。对于ADO对象而言，该属性的缺省值为1-adLockReadOnly只读，要编辑记录则必须加以改变。
+
+Update方法：对记录集当前记录的更改进行保存到数据库。
+
+UpdateBatch方法：成批保存更改的多条记录。只有当记录集使用锁定方式为adLockBatchOptimistic打开时该方法才有效。使用该方法，可以加快更新速度。因为一条一条更新的话，速度慢，而多条一起更新的话，其实等同于一个更新操作，因此更快。该方法有个可选参数AffectRecords提一下，它可设为：adAffectCurrent只更新当前记录；adAffectGroup只更新当前Filter属性满足的记录；adAffectAll（缺省）全部更新，包括被当前Filter属性隐藏的记录。
+
+CancelUpdate方法：放弃保存对当前记录自上次Update后的更改，即不保存当前所作的修改。通常在WillChangeRecord事件中进行数据验证时用。当然一般是直接将事件提供的参数adStatus设为adStatusCancel即可取消保存。这里要注意，在WillChangeRecord事件中取消一个操作，将发生“操作已取消”的错误。照我的感觉，还不如直接在要Update的代码前面去验证输入的数据。
+
+在记录集中添加新记录，用addnew方法先在缓存中添加一个新的空记录，这时它自动成为当前记录，通过修改，然后用update方法保存，data1.recordset.update，说明：如果用Movenext等方法将记录指针移开时记录集会自动保存缓存中的记录(等于调用Update方法)。
+
+修改当前记录，只要直接给字段赋值就可以了，注意赋值后也要用Update方法将缓存中的数据保存，否则不会自动更新，除非用MoveNext等方法将指针移开让它自动调用。
+
+删除当前记录用Delete方法就行了。有一点要注意，删除后，记录指针仍在被删除的记录上，因此要用MoveNext等方法将指针移开，或干脆Requery刷新一下。
+
+Sort：指定用来对全部记录排序的参照字段。
+
+Fields：包含记录集中各字段的集合。指定某个字段格式为：fields("字段名")。可省略。如有：m$=data1.recordset.fields("姓名").value为读当前记录(用value表示)的“姓名”字段值。还可用来在代码中修改（写）记录值（不是用绑定控件），如修改记录值为“李新能”：data1.recordset.fields("姓名").value="李新能"。也可写为data1.recordset("姓名").value，括号内写明字段名或“字段索引值”，第1个字段索引值从0开始。如data1.recordset(0).value.
+
+关闭记录集用close方法，格式为“记录集.close”。
+
+要读或写当前记录的某个字段值，只要用“记录集("字段名")”就可以了，Fields和Value都是缺省属性，但当值是一个记录集的除外，如数据环境中Command命令对象的子命令对象。
+
+刷新记录集（即重新打开记录集）：Requery方法。在记录集打开的情况下，迅速关闭又打开一次，以达到确保记录集始终处于激活状态。
+
+返回/设置记录集当前编辑状态：EditMode属性。有以下三个可能返回值：adEditNone没有编辑；adEditInProgress正在编辑（即当前记录已修改但未保存）；adEditAdd已经用AddNew方法添加新记录但还未存盘，在缓存中的是新记录。这个属性通常用来检测某些操作状态，比如可在窗体的Unload事件中防止修改了的记录未保存就卸载。
+
+★ AbsolutePage属性：指定当前记录所在的页。其值的范围在1—PageCount值之间，所谓页，是把Recordset对象按PageSize为标准分为若干页面，每一页（除最后一页）记录数相等（等于PageSize）。有三个特殊值：adPosUnkown未知位置；adPosBOF在文件头；adPosEOF在文件尾。
+
+★ ActiveCommand:属性：只读属性。返回关联的Command对象，如果记录集不是由Command对象创建的，则返回Null.
+
+★ ActiveConnection属性:设置/返回记录集基于哪个Connection对象，如果没有Connection对象，则直接指定一个连接字符串。
+
+★ Cancel: 取消执行异步 Execute（对Connection和Command对象而言） 或 异步Open 方法调用（即通过 adAsyncConnect、adAsyncExecute 或 adAsyncFetch 参数选项调用这些方法）。
+
+★ CacheSize属性：本地内存缓存的大小。
+
+★ CancelBatch方法: 取消批更新模式下记录集中所有还未执行的更新。
+
+★ Clone方法:复制一个记录集。格式：Set 记录集变量=记录集.Clone [adLockReadOnly]当指定可选参数adLockReadOnly表示创建只读的记录集副本。使用 Clone 方法可创建多个 Recordset 对象副本，这对于希望在给定的记录组中保留多个当前记录十分有用。使用 Clone 方法比使用与初始定义相同的定义创建和打开新 Recordset 对象要有效得多。新创建副本的当前记录将设置为首记录。无论游标类型如何，对某个 Recordset 对象所作的修改在其所有副本中都是可见的。不过一旦在原始 Recordset 上执行了 Requery，副本将不再与原始 Recordset 同步。关闭原始 Recordset 时并不关闭它的副本，而关闭某个副本也将不关闭原始 Recordset 或任何其他副本。用户只允许复制支持书签的 Recordset 对象。书签值是可交换的，也就是说，来自一个 Recordset 对象的书签引用可引用其任何副本中的相同记录。
+
+★ CompareBookmarks: 比较两个书签并返回它们相差值的说明。即谁先谁后。
+
+★ CursorLocation: 设置或返回游标服务的位置。游标：可以简单理解为指向若干行的指针。有三种设置值：adUseNone 没有使用游标服务。（该常量已过时并且只为了向后兼容才出现，通常不用）。adUseClient 使用由本地游标库提供的客户端游标，通常使用这种游标。adUseServer 使用数据提供者的或驱动程序提供的游标。
+
+该属性应在建立连接之前设置，更改 CursorLocation 属性不会影响现有的连接。
+
+远程数据服务用法当用于客户端 (ADOR) Recordset 或 Connection 对象时，只能将 CursorLocation 属性设置为 adUseClient。
+
+★ CursorType: 指示在 Recordset 对象中使用的游标类型。AdOpenForwardOnly 仅向前游标，默认值。除了只能在记录中向前滚动外，与静态游标相同。当只需要在记录集中单向移动时，使用它可提高性能。
+
+AdOpenKeyset 键集游标。尽管从您的记录集不能访问其他用户删除的记录，但除无法查看其他用户添加的记录外，键集游标与动态游标相似。仍然可以看见其他用户更改的数据。
+
+AdOpenDynamic 动态游标。可以看见其他用户所作的添加、更改和删除。允许在记录集中进行所有类型的移动，但不包括提供者不支持的书签操作。
+
+AdOpenStatic 静态游标。可以用来查找数据或生成报告的记录集合的静态副本。另外，对其他用户所作的添加、更改或删除不可见。
+
+说明：使用 CursorType 属性可指定打开 Recordset 对象时应该使用的游标类型。Recordset 关闭时 CursorType 属性为读/写，而 Recordset 打开时该属性为只读。
+
+如果将 CursorLocation 属性设置为 adUseClient 则只支持 adOpenStatic 的设置。
+
+★ Filter属性：过滤器。对记录集进行筛选，返回记录集中满足条件的所有记录，该属性指定一个筛选字符串，为一个“字段-比较符号-值”的条件表达式，当该属性赋值后，记录集立即变成筛选后的方式，包括如 AbsolutePosition、AbsolutePage、RecordCount 和 PageCount等属性都将改变，“变”成了一个“新”记录子集，当前记录移动到记录子集的第一个记录。而当清除 Filter 属性后，记录集立即恢复，当前记录位置将移动到原Recordset 的第一个记录。
+
+关于“字段-比较符号-值”的说明：“字段” 必须为 Recordset 中的有效字段名。如果字段名包含空格，必须用方括号将字段名括起来。
+
+“比较符号”必须使用的操作符为：<、>、<=、>=、<>、= 或 LIKE。
+
+“值” 是用于与字段值（如 'Smith'、#8/24/95#、12.345 或 $50.00）进行比较的值。字符串使用单引号而日期使用井号 #(注:在SQL中不用#号)，对于数字，可以使用小数点、货币符号和科学记数法。如果 “比较符号” 为 LIKE，“值” 则可使用通配符。ADO和SQL只允许使用下划线(_) 和百分号 (%) 通配符，而且必须为字符串的尾字符。DAO只允许使用问号(?)和星号(*)作通配符.“值” 不可为 Null。在 LIKE 子句中，可在样式的开头和结尾使用通配符（如 LastName Like '*mit*'），或者只在结尾使用通配符（如，LastName Like 'Smit*'）
+
+Filter属性还有几个特殊值可供选择：AdFilterNone 删除当前筛选条件并恢复查看所有记录。同空字符串””。 AdFilterPendingRecords 允许只查看已更改且尚未发送到服务器的记录。只能应用于批更新模式。 AdFilterAffectedRecords 允许只查看上一次 Delete、Resync、UpdateBatch 或 CancelBatch 调用所影响的记录。 AdFilterFetchedRecords 允许查看当前缓冲区中的记录，即上一次从数据库中检索记录的调用结果。 AdFilterConflictingRecords 允许查看在上一次批更新中失败的记录。
+
+★ GetRows方法: 将Recordset的多个记录值复制到数组中，应当先定义一个变体变量，然后将GetRows的返回值赋给它，这个变量就成了一个二维数组，其第一维下标标识原所在的列（字段），第二维下标标识原所在的行（记录），每一个交叉点就是一个值了，如：
+
+Dim VariData As Variant
+
+VariData = DataEnvironment1.rsCommand1.GetRows
+
+x = UBound(VariData, 1)
+
+y = UBound(VariData, 2)
+
+For m = 0 To x
+
+For n = 0 To y
+
+Print VariData(m, n); ‘用分号表示同一字段的数据打印在同一行。
+
+Next n
+
+Print
+
+Next m
+
+该方法格式：变体变量=记录集.GetRows([rows],[start],[fields])有三个可选参数，第一个参数Rows限制返回的记录数量，即要复制几行记录，它决定的是变体数组的第二维长度，缺省情况下，将读取记录集中的所有记录。第二个参数Start指定从哪个记录位置开始向数组复制记录，可以是一个记录书签字符串，或以下三个常数之一：adBookMarkCurrent(当前记录)adBookMarkFirst(首记录录)adBookMarkLast(尾记录)；第三个参数Fields限制返回的记录字段，即要复制哪几列，它决定的是变体数组的第一维长度，缺省情况下，将读取记录集中的所有字段，该参数可设置为单个字段名字符串，或多个字段名字符串组成的数组。
+
+注意：使用该方法复制记录值时，记录指针将随之移动，每复制一行后，指针自动移动到下一行。
+
+★ GetString: 将 Recordset 按字符串值的变体型 (BSTR) 返回。
+
+★ MarshalOptions: 汇集选项。指示要被调度返回服务器的记录。可选设置值：AdMarshalAll 默认值。表明所有行将返回到服务器。 AdMarshalModifiedOnly 表明只有已修改的行返回到服务器。当使用客户端 (ADOR) Recordset 时，已在客户端被修改的记录将通过称作“调度”的技术写回中间层或 Web 服务器。
+
+★ MaxRecords: 指示通过一次查询返回 Recordset 的记录的最大数目。使用 MaxRecords 属性可对从数据源返回的记录数加以限制。该属性的默认设置为零，表明提供者返回所有所需的记录。Recordset 关闭时，MaxRecords 属性为读/写，打开时为只读。
+
+★ NextRecordset:清除当前Recordset对象，执行下一个命令返回新的Recordset对象。当一个命令语句是复合语句（即用分号隔开的多条命令）？时，用该方法依次执行下一条命令。格式：Set recordset2=recordset1.NextRecordset。例如：
+
+Dim rst As ADODB.Recordset
+
+Dim strCnn As String
+
+Dim strCmd As String
+
+strCnn = "Provider=Microsoft.Jet.OLEDB.3.51;Persist Security Info=False;Data Source=C:/工商所收费系统/MyDatabase.mdb"
+
+strCmd = "SELECT * FROM unitrecord;SELECT * FROM invoice" ‘AccessSQL不支持。
+
+Set rst = New ADODB.Recordset
+
+rst.Open strCmd, strCnn, adOpenDynamic, adLockOptimistic, adCmdText
+
+Print rst("Name")
+
+Set rst = rst.NextRecordset
+
+Print rst("Name")
+
+rst.Close
+
+★ Open:打开一个游标,即记录集。
+
+★ PageCount:页面数。
+
+★ PageSize:每页大小，缺省为10。
+
+★ Properties:
+
+★ Resync:
+
+★ Save:
+
+★ Seek方法:使用索引进行查询，比用Find方法速度更快，但只能用于以表形式打开的记录集，不能用于动态记录集或快照型记录集，不能在远程服务器表上使用Seek，因为远程数据源不能以表形式打开。而且这个表预先定义了索引字段，使用Seek方法前，要在代码中用Index属性指定当前要使用的索引，格式为：记录集对象.Index=索引名。索引名是在表的设计阶段定义好的。注意索引名不等于字段名，只不过是以某个字段为标准的。设置好要使用的索引后，使用Seek进行查找，格式：Recordset对象.Seek 值，这里的值参数指定按当前索引所属字段进行查找的值，若找到，则指针指到此记录，若没找到，则EOF为True.
+
+一般情况下，在ADO中都不用Seek进行定位，而是用SQL查询生成动态记录集。只是在DAO中有一些使用，如：
+
+Private Sub Command2_Click()
+
+Data1.Recordset.Index = "indexName"
+
+Data1.Recordset.Seek "=", "李春生"
+
+Text1.Text = Data1.Recordset(2)
+
+End Sub
+
+其格式有一点不同，它的第一参数指定一个比较符号，第二个参数才是值，需要在属性窗口中将DATA1的RecordsetType属性设置为0-Table。
+
+★ Sort:
+
+★ Source:数据源。
+
+★ State:对象的当前状态，有adStateClosed（关闭）或adStateOpen（打开）。
+
+★ Status:批量操作或海量操作的状态。
+
+★ StayInSync:
+
+★ Supports方法:判断本记录集是否具有某个方面的功能。如：是否允许增添记录If rst.Supports(adAddnew)=True then rst.Addnew，如果具有某项功能则返回True，不具备则返回False，该方法的一个参数是指定哪个方面，如adDelete是否允许删除记录，adBookmark是否支持书签设置，adUpdate是否允许更新（即修改）数据源，adIndex是否可以使用index属性设置索引，adSeek是否可用Seek方法定位记录指针。再如判断是否支持索引：MsgBox DataEnvironment1.rsCommand1.Supports(adIndex)。
+
+记录集有五种不同的类型：
+
+Table:表示数据库中一张表，记录集与数据库中的数据同步，可通过记录集对数据库添加，删除等操作。

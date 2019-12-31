@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PugiXmlTest", "PugiXmlTest\PugiXmlTest.vcproj", "{940D7E20-0249-447F-B05A-9D38B70F94CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{940D7E20-0249-447F-B05A-9D38B70F94CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{940D7E20-0249-447F-B05A-9D38B70F94CB}.Debug|Win32.Build.0 = Debug|Win32
+		{940D7E20-0249-447F-B05A-9D38B70F94CB}.Release|Win32.ActiveCfg = Release|Win32
+		{940D7E20-0249-447F-B05A-9D38B70F94CB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

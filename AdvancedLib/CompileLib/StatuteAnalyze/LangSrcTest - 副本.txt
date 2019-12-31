@@ -1,0 +1,17 @@
+int a=3;
+int b=4;
+int c=a+b;
+if(b-a==1)
+   a=1;
+if(c-b==a)
+   c=c-(b-a);
+else
+   a=c-b;
+while(a==3)
+  a=a+1;
+do
+{
+  a=a+b;
+  b=b-a;
+}
+while(a==4)

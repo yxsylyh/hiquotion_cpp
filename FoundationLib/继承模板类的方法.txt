@@ -1,0 +1,3 @@
+#include <vector>
+
+template <class T> class CMyVector : public vector<T>  

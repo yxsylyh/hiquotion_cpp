@@ -1,0 +1,179 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: KernelLex - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/KernelLex.res" /d "_DEBUG" /d "_AFXDLL" "F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\KernelLex.rc"" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP5554.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/KernelLex.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\KernelLex.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\KernelLexer\KernelLexer.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\KernelLexer\KernelLexStatusGraphBuilder.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\ConcatRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\DigitRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\EmptyRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStarRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\KleenStartPlusRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\LowerRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\NotRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\OrRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\RangeRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\StringRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\SymbolRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\FoudationLib\RegularExpressionLib\RegularExpressionProj\RegularExpression\UpperRegularExpression.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusGraph\LexStatusGraph.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusGraph\StatusGraphArc.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusGraph\StatusGraphNode.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\Lex\Lexer\Lexer.cpp"
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\Lex\LexStatusMachine\LexStatusMachine.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP5554.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP5555.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/KernelLex.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\工作\代码库\Hiquotion\C++\AdvancedLib\CompileLib\KernelLex\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\a\AppData\Local\Temp\RSP5555.tmp" 
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP5556.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/KernelLex.pdb" /debug /machine:I386 /out:"Debug/KernelLex.exe" /pdbtype:sept 
+".\Debug\KernelLex.obj"
+".\Debug\StdAfx.obj"
+".\Debug\KernelLexer.obj"
+".\Debug\KernelLexStatusGraphBuilder.obj"
+".\Debug\ConcatRegularExpression.obj"
+".\Debug\DigitRegularExpression.obj"
+".\Debug\EmptyRegularExpression.obj"
+".\Debug\KleenStarRegularExpression.obj"
+".\Debug\KleenStartPlusRegularExpression.obj"
+".\Debug\LowerRegularExpression.obj"
+".\Debug\NotRegularExpression.obj"
+".\Debug\OrRegularExpression.obj"
+".\Debug\RangeRegularExpression.obj"
+".\Debug\StringRegularExpression.obj"
+".\Debug\SymbolRegularExpression.obj"
+".\Debug\UpperRegularExpression.obj"
+".\Debug\LexStatusGraph.obj"
+".\Debug\StatusGraphArc.obj"
+".\Debug\StatusGraphNode.obj"
+".\Debug\Lexer.obj"
+".\Debug\LexStatusMachine.obj"
+".\Debug\KernelLex.res"
+]
+Creating command line "link.exe @C:\Users\a\AppData\Local\Temp\RSP5556.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+KernelLex.cpp
+KernelLexer.cpp
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : warning C4786: '??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@IABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(61) : warning C4786: '??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0ABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(103) : warning C4786: '?rbegin@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(105) : warning C4786: '?rbegin@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(107) : warning C4786: '?rend@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(108) : warning C4786: '?rend@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(52) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,int>' : identifier was truncated to '255' characters in the debug information
+        d:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : while compiling class-template member function '__thiscall std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >(const std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > > &)'
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(52) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,int>' : identifier was truncated to '255' characters in the debug information
+        d:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : while compiling class-template member function '__thiscall std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >(const std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > > &)'
+KernelLexStatusGraphBuilder.cpp
+ConcatRegularExpression.cpp
+DigitRegularExpression.cpp
+EmptyRegularExpression.cpp
+KleenStarRegularExpression.cpp
+KleenStartPlusRegularExpression.cpp
+LowerRegularExpression.cpp
+NotRegularExpression.cpp
+OrRegularExpression.cpp
+RangeRegularExpression.cpp
+StringRegularExpression.cpp
+SymbolRegularExpression.cpp
+UpperRegularExpression.cpp
+LexStatusGraph.cpp
+StatusGraphArc.cpp
+StatusGraphNode.cpp
+f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\pointerlist.h(27) : warning C4150: deletion of pointer to incomplete type 'CStatusGraphArc'; no destructor called
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexstatusgraph\statusgraphnode.h(14) : see declaration of 'CStatusGraphArc'
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\pointerlist.h(23) : while compiling class-template member function 'void __thiscall CPointerList<class CStatusGraphArc *>::destroyAll(void)'
+Lexer.cpp
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : warning C4786: '??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@IABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(61) : warning C4786: '??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0ABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(103) : warning C4786: '?rbegin@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(105) : warning C4786: '?rbegin@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(107) : warning C4786: '?rend@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(108) : warning C4786: '?rend@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        f:\工作\代码库\hiquotion\c++\foudationlib\datastructlib\valuelist.h(7) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+        f:\工作\代码库\hiquotion\c++\advancedlib\compilelib\lex\lexer\ilexer.h(56) : see reference to class template instantiation 'CValueList<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >' being compiled
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(142) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,int>' : identifier was truncated to '255' characters in the debug information
+        d:\program files (x86)\microsoft visual studio\vc98\include\vector(142) : while compiling class-template member function 'void __thiscall std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back(const std::basic_string<char,std::char_traits<char>,std::allocator<char> > &)'
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(142) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,int>' : identifier was truncated to '255' characters in the debug information
+        d:\program files (x86)\microsoft visual studio\vc98\include\vector(142) : while compiling class-template member function 'void __thiscall std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back(const std::basic_string<char,std::char_traits<char>,std::allocator<char> > &)'
+LexStatusMachine.cpp
+Generating Code...
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(60) : warning C4786: 'std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::~vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(52) : warning C4786: 'std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+d:\program files (x86)\microsoft visual studio\vc98\include\vector(60) : warning C4786: 'std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::~vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+Linking...
+Creating temporary file "C:\Users\a\AppData\Local\Temp\RSP5D24.tmp" with contents
+[
+/nologo /o"Debug/KernelLex.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\KernelLex.sbr"
+".\Debug\KernelLexer.sbr"
+".\Debug\KernelLexStatusGraphBuilder.sbr"
+".\Debug\ConcatRegularExpression.sbr"
+".\Debug\DigitRegularExpression.sbr"
+".\Debug\EmptyRegularExpression.sbr"
+".\Debug\KleenStarRegularExpression.sbr"
+".\Debug\KleenStartPlusRegularExpression.sbr"
+".\Debug\LowerRegularExpression.sbr"
+".\Debug\NotRegularExpression.sbr"
+".\Debug\OrRegularExpression.sbr"
+".\Debug\RangeRegularExpression.sbr"
+".\Debug\StringRegularExpression.sbr"
+".\Debug\SymbolRegularExpression.sbr"
+".\Debug\UpperRegularExpression.sbr"
+".\Debug\LexStatusGraph.sbr"
+".\Debug\StatusGraphArc.sbr"
+".\Debug\StatusGraphNode.sbr"
+".\Debug\Lexer.sbr"
+".\Debug\LexStatusMachine.sbr"]
+Creating command line "bscmake.exe @C:\Users\a\AppData\Local\Temp\RSP5D24.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+KernelLex.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

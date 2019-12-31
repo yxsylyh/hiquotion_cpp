@@ -1,0 +1,44 @@
+数字定义
+digit -> [0-9]
+digits -> digit+
+number -> digits ( '.' digits)? ('E' ['+' '-']? digits)? | '0' ['x''X'] [0-9a-fA-F]+
+
+字母定义
+letter -> [a-zA-Z]
+
+标识符定义
+id -> letter (letter | digit)*
+
+函数定义（'' 表示 epslon，即空终结符）
+call -> id '(' optparams ')' 
+optparams -> params | ''
+params -> params ',' param | param
+
+a=b=c 形式的文法
+right -> letter '=' right | letter
+
+数字的加减乘除定义
+expr -> expr '+' term | expr '-' term | term
+term -> term '*' factor | term '/' factor | factor
+factor -> digit | '(' expr ')'
+
+基本语法定义（不包括a=b=c的形式）
+stmt -> id '=' expr ';'
+      | "if" '(' expr ')' stmt
+      | "if" '(' expr ')' stmt "else" stmt
+      | "for" '(' optexpr ';' optexpr ';' optexpr ')' stmt
+      | "while" '(' expr ')' stmt
+      | "do" stmt "while" '(' expr ')' ';'
+      | '{' stmts '}'
+
+optexpr -> '' | expr   （为什么不是 expr | ''）
+stmts -> stmts stmt | ''
+
+操作符定义
+assign -> '='
+cond -> "||" | "&&"
+rel -> "==" | "!=" | '<' | "<=" | ">=" | '>'
+op -> '+' | '-' | '*' | '/' | '%'
+not -> '!'
+minus -> '-'
+indx -> '[' | ']'

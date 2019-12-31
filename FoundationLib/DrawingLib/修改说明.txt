@@ -1,0 +1,22 @@
+v0.4
+将CContainer类修改为继承IShape, 不再继承 CTreeNode<IShape *>
+
+问题：如果使用Clip做图形剪裁，发现父图形可以限制子图形的剪裁区域，但不能限制子子图形的剪裁区域；子图形也不能限制子子图形的剪裁区域，不知道为什么。
+
+v0.3
+将基础继承结构调整一下：
+IDrawing不动
+IShape继承IDrawing，并作为所有基础图形的基类（不再是IDrawing）
+ILine继承IShape
+其他继承关系不动
+
+这样，CContainer的CTreeNode的模板就可以用IShape了，IShape可以定义getParent。
+
+v0.2
+将CContainer类使用了数据结构中的CTreeNode结点类来定义其子图形结点
+将上一版的代码重构了一下，代码精炼不少
+添加了GDIPlus的环境（如果不需要GDI+，可以随时去掉，只要代码还未用GDI+重绘）
+打算将图形用GDI+重新绘制（还未实现）
+
+v0.1
+图形绘制的GDI版本
