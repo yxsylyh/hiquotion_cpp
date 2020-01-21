@@ -89,7 +89,7 @@ XmlConfigGen|XML格式配置文件生成类（未完成，也有些复杂）
 Architecture|架构模式设计（管道框架已实现，过程框架暂未实现）
 CodeGen/EntityGenerator|代码生成工具（实体类生成）
 CodecLib|编解码类
-<a href='https://github.com/yxsylyh/hiquotion_cpp/blob/master/FoundationLib/CompileLib'>CompileLib</a>|编译器类库（未完全实现），<b>目前该项目是重点，请关注其最新动态</b>
+<a href='https://github.com/yxsylyh/hiquotion_cpp/blob/master/FoundationLib/CompileLib'>CompileLib</a>|编译器类库（未完全实现）</b>
 DesignPattern|设计模式（代理、责任链）
 DesignerLib|设计器类库（未实现）
 DllPlugin|Dll插件开发（只是框架）
